@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>성수 소개팅 코스 플래너 · 우씨 × 노원</title>
+<meta name="description" content="성수·서울숲·뚝섬 소개팅 코스와 메뉴 추천">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&family=Gowun+Batang:wght@700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f6f3ee;
+    --card: #fffdf9;
+    --ink: #222a24;
+    --muted: #6d756f;
+    --forest: #2f5d46;
+    --forest-soft: #e2ece5;
+    --rose: #d2566b;
+    --rose-soft: #fbe4e8;
+    --line: #e4ddd2;
+    --gold: #c49a45;
+    --radius: 18px;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    font-family: "Noto Sans KR", system-ui, sans-serif;
+    background: var(--bg); color: var(--ink); line-height: 1.6; word-break: keep-all;
+    background-image:
+      radial-gradient(circle at 0% 0%, rgba(47,93,70,0.10), transparent 40%),
+      radial-gradient(circle at 100% 30%, rgba(210,86,107,0.08), transparent 40%);
+    background-attachment: fixed;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 22px 20px 60px; }
+  h1, h2, h3 { margin: 0; letter-spacing: -0.02em; }
+  .serif { font-family: "Gowun Batang", serif; }
+  .muted { color: var(--muted); }
+
+  /* hero */
+  .hero { padding: 26px 0 22px; }
+  .eyebrow { font-size: 12.5px; font-weight: 700; letter-spacing: .12em; color: var(--forest); }
+  .hero h1 { font-size: clamp(32px, 7vw, 46px); line-height: 1.2; margin: 10px 0 12px; font-weight: 900; }
+  .hero h1 .heart { color: var(--rose); }
+  .hero p { margin: 0; font-size: 16.5px; color: #48514b; }
+  .people { display: grid; grid-template-columns: 1fr auto 1fr; gap: 10px; align-items: center; margin: 22px 0 6px; }
+  .person { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 14px; }
+  .person b { display: block; font-size: 16px; }
+  .person span { font-size: 13px; color: var(--muted); }
+  .meet { text-align: center; font-size: 13px; color: var(--forest); font-weight: 700; }
+  .meet .pin { font-size: 22px; display: block; }
+
+  /* form */
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 20px; }
+  .section { margin-top: 26px; }
+  .section > h2 { font-size: 21px; margin-bottom: 12px; font-weight: 700; }
+  .form { display: grid; gap: 18px; }
+  .field { display: grid; gap: 8px; }
+  .field > span { font-size: 14px; font-weight: 700; color: #3b443e; }
+  .field small { font-weight: 400; color: var(--muted); }
+  .seg { display: flex; flex-wrap: wrap; gap: 8px; }
+  .seg button { border: 1.5px solid var(--line); background: #fff; border-radius: 99px; padding: 9px 15px; cursor: pointer; font: 500 14.5px "Noto Sans KR", sans-serif; color: var(--ink); transition: all .15s; }
+  .seg button:hover { border-color: var(--forest); }
+  .seg button.on { border-color: var(--forest); background: var(--forest); color: #fff; }
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  select, input[type=date], input[type=text] { font: 400 15.5px "Noto Sans KR", sans-serif; padding: 11px 13px; border-radius: 12px; border: 1.5px solid var(--line); background: #fff; color: var(--ink); width: 100%; }
+  select:focus, input:focus { outline: none; border-color: var(--forest); }
+  .btn { appearance: none; border: 0; cursor: pointer; font: 700 16px "Noto Sans KR", sans-serif; padding: 14px 24px; border-radius: 99px; background: var(--rose); color: #fff; box-shadow: 0 6px 18px rgba(210,86,107,.25); transition: transform .15s; }
+  .btn:hover { transform: translateY(-1px); }
+  .btn.ghost { background: transparent; color: var(--ink); border: 1px solid var(--line); box-shadow: none; }
+  .btn.sm { padding: 8px 14px; font-size: 13.5px; }
+  .btn.green { background: var(--forest); box-shadow: 0 6px 18px rgba(47,93,70,.25); }
+
+  /* result */
+  .summary { background: var(--forest); color: #eef5f0; border-radius: 22px; padding: 22px; position: relative; overflow: hidden; }
+  .summary::after { content: "🌿"; position: absolute; right: -8px; top: -18px; font-size: 110px; opacity: .14; transform: rotate(-12deg); }
+  .summary h2 { font-size: 24px; margin-bottom: 6px; }
+  .summary p { margin: 0; color: #cfe1d5; font-size: 14.5px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+  .chips span { background: rgba(255,255,255,.14); padding: 5px 11px; border-radius: 99px; font-size: 13px; }
+
+  .timeline { list-style: none; padding: 0; margin: 0; position: relative; }
+  .timeline::before { content: ""; position: absolute; left: 57px; top: 12px; bottom: 12px; width: 2px; background: var(--line); }
+  .slot { display: grid; grid-template-columns: 48px 20px 1fr; gap: 8px; padding: 10px 0; }
+  .slot .time { font-weight: 700; font-size: 14px; color: var(--forest); font-variant-numeric: tabular-nums; padding-top: 3px; }
+  .slot .dot { width: 14px; height: 14px; border-radius: 50%; background: #fff; border: 3px solid var(--rose); margin-top: 6px; position: relative; z-index: 1; }
+  .slot.walkmove .dot { width: 8px; height: 8px; border: 0; background: var(--line); margin: 9px 0 0 3px; }
+  .slot.walkmove .body { color: var(--muted); font-size: 13.5px; padding-top: 2px; }
+  .slot.end .dot { border-color: var(--forest); }
+  .kind { font-size: 12px; font-weight: 700; color: var(--rose); letter-spacing: .04em; }
+  .slot h3 { font-size: 17.5px; margin: 2px 0 2px; }
+  .slot .meta { font-size: 13px; color: var(--muted); }
+  .slot .desc { font-size: 14.5px; margin: 6px 0 0; color: #3b443e; }
+  .order { margin-top: 8px; background: var(--rose-soft); border-radius: 12px; padding: 10px 12px; font-size: 14px; }
+  .order b { color: #9b2c40; }
+  .tip { margin-top: 6px; font-size: 13.5px; color: var(--forest); }
+  .links { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; align-items: center; }
+  .links a { font-size: 13px; color: var(--forest); text-decoration: none; border-bottom: 1px dashed currentColor; }
+  .alt { font-size: 13px; color: var(--muted); }
+  .alt button { border: 1px solid var(--line); background: #fff; border-radius: 99px; padding: 3px 10px; font: 500 12.5px "Noto Sans KR", sans-serif; cursor: pointer; color: var(--ink); margin: 2px 2px 0 0; }
+  .alt button:hover { border-color: var(--rose); color: var(--rose); }
+  .warn { background: #fff6e6; border: 1px solid #f0d9a8; border-radius: 12px; padding: 10px 12px; font-size: 13.5px; margin-top: 12px; }
+
+  .menu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .menu-card { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 16px; }
+  .menu-card h3 { font-size: 16px; margin-bottom: 8px; }
+  .menu-card ul { margin: 0; padding-left: 18px; font-size: 14px; }
+  .menu-card li { margin-bottom: 5px; }
+  .menu-card.good h3 { color: var(--forest); }
+  .menu-card.bad h3 { color: var(--rose); }
+
+  .route { display: grid; gap: 10px; }
+  .route .card { padding: 16px; }
+  .route b { display: block; margin-bottom: 4px; }
+  .route p { margin: 0; font-size: 14px; color: #3b443e; }
+
+  .check { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
+  .check label { display: flex; gap: 10px; align-items: flex-start; font-size: 14.5px; cursor: pointer; }
+  .check input { width: 18px; height: 18px; margin-top: 3px; accent-color: var(--forest); }
+
+  .row { display: flex; flex-wrap: wrap; gap: 10px; }
+  .center { justify-content: center; text-align: center; }
+  .toast { position: fixed; left: 50%; bottom: 24px; transform: translateX(-50%) translateY(20px); background: var(--ink); color: #fff; padding: 10px 18px; border-radius: 99px; font-size: 14px; opacity: 0; transition: all .25s; pointer-events: none; }
+  .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+  footer { text-align: center; font-size: 12.5px; color: var(--muted); margin-top: 40px; }
+  .hidden { display: none !important; }
+
+  @media (max-width: 560px) {
+    .menu-grid, .two { grid-template-columns: 1fr; }
+    .people { grid-template-columns: 1fr; }
+    .meet .pin { display: inline; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <div class="eyebrow">SEONGSU · 서울숲 · 뚝섬</div>
+    <h1>우씨 <span class="heart">♥</span> 노원,<br>성수에서 첫 만남</h1>
+    <p>만나는 시간과 취향만 고르면 소개팅 코스, 메뉴, 귀가 동선까지 한 번에 짜드려요.</p>
+    <div class="people">
+      <div class="person"><b>🚄 대전 우씨</b><span>SRT 대전→수서, 수인분당선으로 서울숲역까지 환승 없이</span></div>
+      <div class="meet"><span class="pin">📍</span>성수에서 만나요</div>
+      <div class="person"><b>🚇 노원</b><span>7호선으로 건대입구(2호선 환승) 또는 뚝섬유원지</span></div>
+    </div>
+  </header>
+
+  <!-- SETTINGS -->
+  <section class="section" id="setup">
+    <h2>코스 설정</h2>
+    <div class="card">
+      <form class="form" id="form">
+        <div class="field"><span>만나는 시간</span>
+          <div class="seg" data-name="start">
+            <button type="button" data-v="12:00">점심 12시</button>
+            <button type="button" data-v="15:00" class="on">오후 3시</button>
+            <button type="button" data-v="18:00">저녁 6시</button>
+          </div>
+        </div>
+        <div class="two">
+          <label class="field"><span>날짜 <small>(휴무일 반영)</small></span><input type="date" id="date"></label>
+          <label class="field"><span>우씨 대전행 기차 <small>(수서 출발)</small></span>
+            <select id="train"></select>
+          </label>
+        </div>
+        <div class="field"><span>원하는 분위기</span>
+          <div class="seg" data-name="vibe">
+            <button type="button" data-v="quiet" class="on">🤫 조용히 대화 집중</button>
+            <button type="button" data-v="walk">🌳 걸으면서 자연스럽게</button>
+            <button type="button" data-v="hip">✨ 성수 핫플 구경</button>
+          </div>
+        </div>
+        <div class="field"><span>식사 메뉴</span>
+          <div class="seg" data-name="food">
+            <button type="button" data-v="any" class="on">상관없음</button>
+            <button type="button" data-v="western">🍝 양식</button>
+            <button type="button" data-v="korean">🍚 한식</button>
+            <button type="button" data-v="japanese">🍣 일식·아시안</button>
+          </div>
+        </div>
+        <div class="two">
+          <div class="field"><span>술</span>
+            <div class="seg" data-name="drink">
+              <button type="button" data-v="yes">🍷 좋아요</button>
+              <button type="button" data-v="light" class="on">한두 잔</button>
+              <button type="button" data-v="no">안 마셔요</button>
+            </div>
+          </div>
+          <div class="field"><span>1인 예산 <small>(식사 기준)</small></span>
+            <div class="seg" data-name="budget">
+              <button type="button" data-v="2">~2만</button>
+              <button type="button" data-v="4" class="on">3~4만</button>
+              <button type="button" data-v="6">5만+</button>
+            </div>
+          </div>
+        </div>
+        <div class="field"><span>날씨</span>
+          <div class="seg" data-name="weather">
+            <button type="button" data-v="good" class="on">☀️ 걷기 좋음</button>
+            <button type="button" data-v="bad">🌧️ 비·추위 (실내 위주)</button>
+          </div>
+        </div>
+        <button class="btn" type="submit">코스 만들기 💌</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- RESULT -->
+  <section class="section hidden" id="result">
+    <div class="summary" id="summary"></div>
+
+    <div class="section">
+      <h2>추천 코스</h2>
+      <div class="card"><ol class="timeline" id="timeline"></ol></div>
+      <div id="warnings"></div>
+    </div>
+
+    <div class="section">
+      <h2>메뉴 고르는 요령</h2>
+      <div class="menu-grid" id="menuTips"></div>
+    </div>
+
+    <div class="section">
+      <h2>오가는 길</h2>
+      <div class="route" id="route"></div>
+    </div>
+
+    <div class="section">
+      <h2>전날 체크리스트</h2>
+      <div class="card"><ul class="check" id="checklist"></ul></div>
+    </div>
+
+    <div class="section row center">
+      <button class="btn green" id="copyBtn">코스 텍스트로 복사</button>
+      <button class="btn ghost" id="linkBtn">링크 복사</button>
+      <button class="btn ghost" id="editBtn">↺ 설정 다시 하기</button>
+    </div>
+  </section>
+
+  <footer>영업시간·휴무는 수시로 바뀌어요. 가기 전 네이버지도에서 꼭 확인하세요. · Made for 우씨 & 노원</footer>
+</div>
+<div class="toast" id="toast">복사했어요!</div>
+
+<script>
+(function () {
+  "use strict";
+
+  // ---------------- Zones (walking minutes between them) ----------------
+  // S: 서울숲역·서울숲 입구 / A: 서울숲 아뜰리에길(서울숲4길 일대) / T: 뚝섬역 / Y: 성수역·연무장길 / H: 뚝섬한강공원
+  const ZONE_NAME = { S: "서울숲역", A: "아뜰리에길", T: "뚝섬역", Y: "성수역·연무장길", H: "뚝섬한강공원" };
+  const WALK = { "S-A": 5, "S-T": 8, "S-Y": 15, "S-H": 20, "A-T": 8, "A-Y": 15, "A-H": 20, "T-Y": 10, "T-H": 15, "Y-H": 20 };
+  const walkMin = (a, b) => (a === b ? 3 : WALK[a + "-" + b] || WALK[b + "-" + a] || 15);
+
+  // ---------------- Places ----------------
+  // type: meal | cafe | walk | bar
+  // price: 1인 대략(만원), vibe: quiet/walk/hip 적합도 0~3
+  // hours: [open, close] 확인된 곳만 / closed: 요일(0=일) / slots: lunch, dinner
+  const P = [
+    // --- 식사 ---
+    { id: "peeps", type: "meal", name: "핍스 (PEEPS)", zone: "T", cuisine: "western", price: 4.5, alcohol: true, slots: ["lunch", "dinner"],
+      vibe: { quiet: 3, walk: 1, hip: 2 },
+      desc: "생면 파스타와 내추럴 와인. 뚝섬역·서울숲역 모두 가까워요.",
+      order: "감자 뇨끼 + 화이트 라구 따야린 하나씩 시켜서 나눠 먹기",
+      tip: "와인 한 잔씩 곁들이기 좋은 분위기. 예약 추천." },
+    { id: "sketch", type: "meal", name: "스케치테이블 성수", zone: "Y", cuisine: "western", price: 3, alcohol: true, slots: ["lunch", "dinner"], hours: ["11:00", "22:00"],
+      vibe: { quiet: 2, walk: 1, hip: 2 },
+      desc: "따뜻한 이탈리안 레스토랑 분위기. 수족관에서 바로 꺼낸 조개로 요리해요.",
+      order: "시그니처 피자 + 새우 비스큐 파스타 (각 2만원대 후반)",
+      tip: "피자는 나눠 먹기 좋아서 첫 만남 메뉴로 무난해요." },
+    { id: "uovo", type: "meal", name: "우오보 파스타 바", zone: "Y", cuisine: "western", price: 4.5, alcohol: true, slots: ["dinner"], hours: ["17:30", "22:30"], closed: [0],
+      vibe: { quiet: 2, walk: 0, hip: 3 },
+      desc: "파인다이닝 출신 셰프의 생면 파스타 바. 바 좌석만 있어요.",
+      order: "대표 메뉴 우오보 라비올리(반숙 노른자 + 리코타)",
+      tip: "나란히 앉는 바석이라 마주 보는 부담이 적고, 요리 구경이 대화거리가 돼요. 19:30~20:00 브레이크, 일요일 휴무." },
+    { id: "concasse", type: "meal", name: "콩카세", zone: "A", cuisine: "western", price: 2.5, alcohol: true, slots: ["lunch", "dinner"],
+      vibe: { quiet: 3, walk: 2, hip: 1 },
+      desc: "서울숲4길 반지하의 작은 파스타집. 북적이지 않아서 대화하기 좋아요.",
+      order: "항정살 김치퓨레 + 라자냐",
+      tip: "자리가 적어서 예약하거나 일찍 가는 게 안전해요." },
+    { id: "halmeoni", type: "meal", name: "할머니의 레시피", zone: "A", cuisine: "korean", price: 2, alcohol: false, slots: ["lunch", "dinner"],
+      vibe: { quiet: 3, walk: 2, hip: 0 },
+      desc: "서울숲 근처 한식 상차림. 부담 없이 편하게 먹기 좋아요.",
+      order: "대표 정식 메뉴 (반찬이 여러 가지라 이야깃거리가 생겨요)",
+      tip: "양식이 부담스러운 사람에게 안전한 선택." },
+    { id: "nanpo", type: "meal", name: "난포", zone: "A", cuisine: "korean", price: 3, alcohol: true, slots: ["lunch", "dinner"],
+      vibe: { quiet: 2, walk: 2, hip: 2 },
+      desc: "서울숲의 모던 한식. 한식인데 분위기는 세련된 편이에요.",
+      order: "2인이면 메인 2개 + 사이드 1개",
+      tip: "인기가 많아 웨이팅이 있을 수 있어요." },
+    { id: "beoseot", type: "meal", name: "버섯집", zone: "S", cuisine: "korean", price: 2, alcohol: false, slots: ["lunch"],
+      vibe: { quiet: 2, walk: 3, hip: 0 },
+      desc: "서울숲 산책 전후로 가볍게 먹기 좋은 버섯 요리 한식.",
+      order: "버섯 요리 정식",
+      tip: "점심 먹고 바로 서울숲 산책으로 이어가기 좋아요." },
+    { id: "hoho", type: "meal", name: "호호식당 성수", zone: "S", cuisine: "japanese", price: 1.8, alcohol: false, slots: ["lunch", "dinner"],
+      vibe: { quiet: 1, walk: 2, hip: 1 },
+      desc: "깔끔한 일식 덮밥집. 가격 부담이 적어요.",
+      order: "대표 덮밥 + 사이드 하나 나눠 먹기",
+      tip: "식사는 가볍게 하고 카페에 오래 있고 싶을 때 좋아요." },
+    { id: "ssook", type: "meal", name: "쏘옥 성수", zone: "Y", cuisine: "japanese", price: 6, alcohol: true, slots: ["dinner"],
+      vibe: { quiet: 3, walk: 0, hip: 2 },
+      desc: "한식 재료로 만드는 아시안 퓨전 와인 다이닝. 테이블 간격이 넓어요.",
+      order: "셰프 추천 요리 2~3개 + 와인 페어링 상담",
+      tip: "캐치테이블 예약. 저녁 소개팅에 '신경 썼다'는 느낌을 주기 좋아요." },
+    { id: "teni", type: "meal", name: "테니", zone: "Y", cuisine: "western", price: 2, alcohol: false, slots: ["lunch"], hours: ["10:00", "21:00"],
+      vibe: { quiet: 2, walk: 1, hip: 2 },
+      desc: "유럽풍 베이커리 브런치 카페. 좌석 간격이 넓고 층고가 높아요.",
+      order: "브런치 플레이트 하나 + 디저트 하나",
+      tip: "점심 겸 카페를 한 곳에서 해결할 수 있어요." },
+
+    // --- 카페 ---
+    { id: "center", type: "cafe", name: "센터커피 서울숲", zone: "A", price: 0.8, vibe: { quiet: 3, walk: 2, hip: 1 },
+      desc: "서울숲 근처 한적한 스페셜티 카페.", order: "핸드드립 + 디저트 하나", tip: "대화에 집중하기 좋은 곳." },
+    { id: "sosohage", type: "cafe", name: "소소하게", zone: "A", price: 1, vibe: { quiet: 2, walk: 2, hip: 1 },
+      desc: "서울숲 아뜰리에길의 아기자기한 디저트 카페.", order: "케이크 하나 나눠 먹기", tip: "작은 공간이라 오래 앉기보단 1시간 정도." },
+    { id: "bluebottle", type: "cafe", name: "블루보틀 성수", zone: "T", price: 0.8, vibe: { quiet: 1, walk: 1, hip: 2 },
+      desc: "블루보틀 국내 1호점. 뚝섬역 근처.", order: "드립 커피 + 시즌 디저트", tip: "주말엔 붐벼서 조용한 대화엔 아쉬울 수 있어요." },
+    { id: "onion", type: "cafe", name: "어니언 성수", zone: "Y", price: 1, vibe: { quiet: 0, walk: 1, hip: 3 },
+      desc: "오래된 공장을 고친 성수 대표 카페.", order: "팡도르 + 커피", tip: "공간 구경은 최고, 대신 시끄럽고 줄이 길어요." },
+    { id: "beans", type: "cafe", name: "빈즈앤플라워", zone: "T", price: 1.2, vibe: { quiet: 2, walk: 1, hip: 2 },
+      desc: "먼치스앤구디스의 두 번째 공간. 원목 가구로 따뜻한 분위기.", order: "페이스트리 + 라테", tip: "소품 구경하며 이야깃거리 만들기 좋아요." },
+
+    // --- 산책·구경 ---
+    { id: "forest", type: "walk", name: "서울숲 산책", zone: "S", outdoor: true, dur: 50, vibe: { quiet: 2, walk: 3, hip: 0 },
+      desc: "은행나무길, 호수, 꽃사슴 방사장을 한 바퀴. 걸으면서 이야기하면 어색함이 금방 풀려요.", tip: "벤치가 많아서 쉬엄쉬엄 걷기 좋아요." },
+    { id: "atelier", type: "walk", name: "아뜰리에길 골목 구경", zone: "A", outdoor: true, dur: 30, vibe: { quiet: 1, walk: 2, hip: 2 },
+      desc: "서울숲 옆 작은 가게와 카페가 모인 골목.", tip: "마음에 드는 가게가 있으면 들어가 보면서 취향 이야기하기." },
+    { id: "yeonmu", type: "walk", name: "연무장길 편집숍·팝업 구경", zone: "Y", outdoor: false, dur: 40, vibe: { quiet: 0, walk: 2, hip: 3 },
+      desc: "성수 메인 거리. 팝업스토어와 편집숍이 계속 바뀌어요.", tip: "실내 구경 위주라 비 오는 날에도 괜찮아요." },
+    { id: "hangang", type: "walk", name: "뚝섬한강공원", zone: "H", outdoor: true, dur: 40, sunset: true, vibe: { quiet: 2, walk: 3, hip: 1 },
+      desc: "한강 바람 맞으며 걷기. 해 질 무렵이 특히 예뻐요.", tip: "뚝섬유원지역 바로 앞. 노원 분 귀가 동선(7호선)과도 맞아요." },
+
+    // --- 2차 ---
+    { id: "matches", type: "bar", name: "매치스", zone: "T", price: 4, alcohol: true, vibe: { quiet: 2, walk: 0, hip: 2 },
+      desc: "실내인데 테라스 느낌이 나는 캐주얼 와인바.", order: "추천 와인 시음 후 글라스로 + 가벼운 안주 하나", tip: "주류 주문 필수." },
+    { id: "gokseong", type: "bar", name: "곡성", zone: "A", price: 4, alcohol: true, vibe: { quiet: 3, walk: 1, hip: 1 },
+      desc: "아늑하고 조용한 내추럴 와인바.", order: "글라스 와인 + 문어 콜드 파스타", tip: "조용한 대화형 2차로 제일 무난해요." },
+    { id: "gireogi", type: "bar", name: "기러기둥지", zone: "Y", price: 4.5, alcohol: true, vibe: { quiet: 0, walk: 0, hip: 3 },
+      desc: "숨겨진 입구의 북유럽풍 와인바. 분위기는 압도적이에요.", order: "와인 한 병 나눠 마시기", tip: "어둡고 사람이 많아요. 대화보다 분위기 위주." },
+    { id: "amazing", type: "bar", name: "어메이징 브루잉컴퍼니", zone: "Y", price: 3, alcohol: true, vibe: { quiet: 1, walk: 1, hip: 2 },
+      desc: "성수 수제맥주 브루펍.", order: "샘플러로 맥주 취향 맞혀보기", tip: "와인보다 편한 사람에게. 시끄러운 편이에요." },
+    { id: "nightwalk", type: "bar", name: "서울숲 밤 산책 + 편의점 음료", zone: "S", price: 0.3, alcohol: false, outdoor: true, vibe: { quiet: 3, walk: 3, hip: 0 },
+      desc: "술 대신 밤의 서울숲을 천천히 한 바퀴.", order: "따뜻한 음료 하나씩", tip: "술을 안 마시면 이게 최고의 2차예요." },
+    { id: "dessert2", type: "bar", name: "디저트 카페 2차", zone: "T", price: 1.2, alcohol: false, vibe: { quiet: 2, walk: 1, hip: 2 },
+      desc: "저녁 뒤 케이크와 차로 마무리.", order: "케이크 하나 + 차 두 잔", tip: "빈즈앤플라워·소소하게 등 근처 카페 활용." }
+  ];
+  const byId = Object.fromEntries(P.map((p) => [p.id, p]));
+
+  // ---------------- Helpers ----------------
+  const toMin = (s) => { const [h, m] = s.split(":").map(Number); return h * 60 + m; };
+  const hhmm = (m) => String(Math.floor(m / 60)).padStart(2, "0") + ":" + String(m % 60).padStart(2, "0");
+  const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  // 받침 여부로 조사 고르기 (괄호 속 영문은 무시)
+  const josa = (name, a, b) => {
+    const base = name.replace(/\s*\(.*\)\s*$/, "").trim();
+    const c = base.charCodeAt(base.length - 1);
+    if (c < 0xac00 || c > 0xd7a3) return name + b;
+    return name + ((c - 0xac00) % 28 ? a : b);
+  };
+  const mapUrl = (name) => "https://map.naver.com/p/search/" + encodeURIComponent("성수 " + name.replace(/\(.*\)/, "").trim());
+
+  // ---------------- Form ----------------
+  const trainSel = document.getElementById("train");
+  trainSel.innerHTML = '<option value="">정하지 않음</option>' +
+    Array.from({ length: 13 }, (_, i) => 17 * 60 + i * 30).map((m) => `<option value="${hhmm(m)}">${hhmm(m)} 수서 출발</option>`).join("");
+  trainSel.value = "21:00";
+
+  document.querySelectorAll(".seg").forEach((g) => g.querySelectorAll("button").forEach((b) => b.addEventListener("click", () => {
+    g.querySelectorAll("button").forEach((x) => x.classList.remove("on"));
+    b.classList.add("on");
+  })));
+  const segVal = (n) => document.querySelector(`.seg[data-name="${n}"] .on`).dataset.v;
+  const setSeg = (n, v) => {
+    const g = document.querySelector(`.seg[data-name="${n}"]`);
+    const b = g && g.querySelector(`[data-v="${v}"]`);
+    if (b) { g.querySelectorAll("button").forEach((x) => x.classList.remove("on")); b.classList.add("on"); }
+  };
+
+  const overrides = {}; // slotIndex -> placeId chosen by user
+
+  document.getElementById("form").addEventListener("submit", (e) => {
+    e.preventDefault();
+    Object.keys(overrides).forEach((k) => delete overrides[k]);
+    run(readForm());
+  });
+  document.getElementById("editBtn").onclick = () => { document.getElementById("setup").scrollIntoView({ behavior: "smooth" }); };
+
+  function readForm() {
+    return {
+      start: segVal("start"), vibe: segVal("vibe"), food: segVal("food"), drink: segVal("drink"),
+      budget: Number(segVal("budget")), weather: segVal("weather"),
+      date: document.getElementById("date").value || "", train: trainSel.value || ""
+    };
+  }
+
+  // ---------------- Planner ----------------
+  function templateFor(start) {
+    const s = toMin(start);
+    if (s < toMin("13:30")) return [["meal", "lunch", 70], ["walk", null, 0], ["cafe", null, 70]];
+    if (s < toMin("16:30")) return [["cafe", null, 60], ["walk", null, 0], ["meal", "dinner", 90], ["bar", null, 70]];
+    return [["meal", "dinner", 90], ["bar", null, 70]];
+  }
+
+  function score(p, o, slotKind, prevZone) {
+    let sc = (p.vibe ? p.vibe[o.vibe] : 1) * 10;
+    if (p.type === "meal") {
+      if (o.food !== "any") sc += p.cuisine === o.food ? 18 : -25;
+      if (p.price > o.budget + 0.6) sc -= 14 * (p.price - o.budget);
+      if (o.budget >= 6 && p.price >= 4) sc += 6;
+      if (o.drink === "no" && p.alcohol && slotKind === "dinner") sc -= 3;
+    }
+    if (p.type === "bar") {
+      if (o.drink === "no") sc += p.alcohol ? -100 : 20;
+      if (o.drink === "yes" && p.alcohol) sc += 8;
+      if (o.drink === "light" && p.alcohol) sc += 3;
+    }
+    if (o.weather === "bad" && p.outdoor) sc -= 40;
+    if (prevZone) sc -= walkMin(prevZone, p.zone) * 0.6;
+    return sc;
+  }
+
+  function fits(p, slotKind, t, dur, weekday) {
+    if (p.slots && slotKind && !p.slots.includes(slotKind)) return false;
+    if (p.closed && weekday !== null && p.closed.includes(weekday)) return false;
+    if (p.hours) {
+      const open = toMin(p.hours[0]), close = toMin(p.hours[1]);
+      if (t < open - 20 || t + dur > close) return false;
+    }
+    return true;
+  }
+
+  function plan(o) {
+    const weekday = o.date ? new Date(o.date + "T12:00:00").getDay() : null;
+    const startMin = toMin(o.start);
+    // 우씨: 서울숲역 → 수서 약 25분 + 여유 20분
+    const endBy = o.train ? toMin(o.train) - 45 : startMin + 6 * 60;
+    const tpl = templateFor(o.start);
+    const used = new Set();
+    const items = [];
+    const warnings = [];
+    let t = startMin, zone = null;
+
+    tpl.forEach(([type, slotKind, baseDur], idx) => {
+      let dur = baseDur;
+      const cands = P.filter((p) => p.type === type && !used.has(p.id))
+        .filter((p) => fits(p, slotKind, t + (zone ? walkMin(zone, p.zone) : 0), p.dur || dur, weekday))
+        .map((p) => ({ p, sc: score(p, o, slotKind, zone) }))
+        .filter((x) => x.sc > -60)
+        .sort((a, b) => b.sc - a.sc);
+      if (!cands.length) return;
+
+      let pick = cands[0].p;
+      if (overrides[idx] && byId[overrides[idx]] && cands.some((c) => c.p.id === overrides[idx])) pick = byId[overrides[idx]];
+      const alts = cands.filter((c) => c.p.id !== pick.id).slice(0, 3).map((c) => c.p);
+      dur = pick.dur || dur;
+
+      const move = zone ? walkMin(zone, pick.zone) : 0;
+      if (t + move + 30 > endBy) { warnings.push(`<b>${esc(pick.name)}</b>까지 하면 기차 시간이 빠듯해서 코스에서 뺐어요.`); return; }
+      if (move > 3) { items.push({ kind: "move", time: t, dur: move, from: zone, to: pick.zone }); }
+      t += move;
+      if (t + dur > endBy) { dur = endBy - t; warnings.push(`기차 시간 때문에 <b>${esc(josa(pick.name, "에는", "에는"))}</b> ${dur}분만 있을 수 있어요.`); }
+      items.push({ kind: "place", idx, time: t, dur, p: pick, slotKind, alts });
+      used.add(pick.id);
+      zone = pick.zone;
+      t += dur + 5;
+    });
+
+    return { items, end: t, endZone: zone, endBy, warnings, weekday };
+  }
+
+  // ---------------- Render ----------------
+  const KIND_LABEL = { meal: "식사", cafe: "카페", walk: "산책·구경", bar: "2차" };
+  const WEEK = ["일", "월", "화", "수", "목", "금", "토"];
+  let lastPlan = null, lastOpts = null;
+
+  function run(o) {
+    lastOpts = o;
+    const r = plan(o);
+    lastPlan = r;
+    renderSummary(o, r);
+    renderTimeline(o, r);
+    renderMenuTips(o, r);
+    renderRoute(o, r);
+    renderChecklist(o, r);
+    const res = document.getElementById("result");
+    res.classList.remove("hidden");
+    history.replaceState(null, "", "#" + new URLSearchParams({ ...o, ov: Object.entries(overrides).map(([k, v]) => k + ":" + v).join(",") }).toString());
+  }
+
+  function renderSummary(o, r) {
+    const vibe = { quiet: "조용한 대화형", walk: "산책형", hip: "핫플 구경형" }[o.vibe];
+    const total = r.items.filter((x) => x.kind === "place").reduce((s, x) => s + (x.p.price || 0), 0);
+    document.getElementById("summary").innerHTML = `
+      <h2>${vibe} 소개팅 코스</h2>
+      <p>${o.start} 시작 · ${hhmm(Math.min(r.end, r.endBy))} 무렵 마무리${o.train ? ` · 우씨 ${o.train} SRT` : ""}</p>
+      <div class="chips">
+        ${o.date ? `<span>📅 ${o.date} (${WEEK[r.weekday]})</span>` : ""}
+        <span>💸 1인 약 ${total ? Math.round(total * 10) / 10 + "만원" : "-"}</span>
+        <span>${o.drink === "no" ? "🥤 술 없이" : o.drink === "yes" ? "🍷 와인 OK" : "🥂 한두 잔"}</span>
+        <span>${o.weather === "bad" ? "☂️ 실내 위주" : "🌤️ 산책 포함"}</span>
+      </div>`;
+  }
+
+  function renderTimeline(o, r) {
+    const el = document.getElementById("timeline");
+    const rows = r.items.map((it) => {
+      if (it.kind === "move") {
+        return `<li class="slot walkmove"><span class="time">${hhmm(it.time)}</span><span class="dot"></span>
+          <span class="body">🚶 ${ZONE_NAME[it.from]} → ${ZONE_NAME[it.to]} 도보 약 ${it.dur}분</span></li>`;
+      }
+      const p = it.p;
+      return `<li class="slot"><span class="time">${hhmm(it.time)}</span><span class="dot"></span>
+        <div class="body">
+          <div class="kind">${KIND_LABEL[p.type]}${it.slotKind === "lunch" ? " · 점심" : it.slotKind === "dinner" ? " · 저녁" : ""} · ${it.dur}분</div>
+          <h3>${esc(p.name)}</h3>
+          <div class="meta">📍 ${ZONE_NAME[p.zone]}${p.price ? ` · 1인 약 ${p.price}만원` : ""}${p.hours ? ` · ${p.hours[0]}~${p.hours[1]}` : ""}</div>
+          <p class="desc">${esc(p.desc)}</p>
+          ${p.order ? `<div class="order"><b>이렇게 주문:</b> ${esc(p.order)}</div>` : ""}
+          ${p.tip ? `<div class="tip">💡 ${esc(p.tip)}</div>` : ""}
+          <div class="links">${p.type !== "walk" || p.id === "forest" || p.id === "hangang" ? `<a href="${mapUrl(p.name)}" target="_blank" rel="noopener">네이버지도에서 보기 ↗</a>` : ""}</div>
+          ${it.alts.length ? `<div class="alt">다른 후보: ${it.alts.map((a) => `<button data-idx="${it.idx}" data-id="${a.id}">${esc(a.name)}</button>`).join("")}</div>` : ""}
+        </div></li>`;
+    });
+    rows.push(`<li class="slot end"><span class="time">${hhmm(Math.min(r.end, r.endBy))}</span><span class="dot"></span>
+      <div class="body"><div class="kind">마무리</div><h3>${o.train ? "우씨는 수서로, 노원 분은 7호선으로" : "각자 귀가"}</h3>
+      <div class="meta">${o.train ? `서울숲역에서 수인분당선 타면 수서까지 환승 없이 약 25분. ${o.train} 기차 여유 있게 도착해요.` : "아래 '오가는 길' 참고"}</div></div></li>`);
+    el.innerHTML = rows.join("");
+    el.querySelectorAll(".alt button").forEach((b) => b.addEventListener("click", () => {
+      overrides[b.dataset.idx] = b.dataset.id;
+      run(lastOpts);
+    }));
+
+    const w = [...r.warnings];
+    const firstMeal = r.items.find((x) => x.kind === "place" && x.p.type === "meal");
+    if (!o.date) w.push("날짜를 넣으면 휴무일(예: 우오보 일요일 휴무)을 자동으로 피해요.");
+    if (firstMeal && ["peeps", "uovo", "ssook", "concasse", "nanpo"].includes(firstMeal.p.id)) w.push(`<b>${esc(josa(firstMeal.p.name, "은", "는"))}</b> 예약하거나 웨이팅을 감안하세요. 소개팅 날 줄 서는 건 피하는 게 좋아요.`);
+    document.getElementById("warnings").innerHTML = w.map((x) => `<div class="warn">⚠️ ${x}</div>`).join("");
+  }
+
+  function renderMenuTips(o, r) {
+    const meal = r.items.find((x) => x.kind === "place" && x.p.type === "meal");
+    const cuisine = meal ? meal.p.cuisine : o.food;
+    const good = {
+      western: ["파스타·피자 두 개 시켜서 나눠 먹기 (\"하나씩 시켜서 나눠 먹을까요?\"가 자연스러운 첫 대화)", "토마토·크림 하나씩 골라 취향 이야기하기", "와인은 글라스로 한 잔씩, 병은 2차에서"],
+      korean: ["반찬 많은 정식·한상 차림: 음식이 대화 소재가 돼요", "보쌈·전처럼 가운데 두고 나눠 먹는 메뉴", "국물 요리는 개인 그릇으로 나오는 곳이 편해요"],
+      japanese: ["덮밥·정식처럼 각자 한 그릇 + 사이드 하나 공유", "코스·오마카세는 대화 흐름이 자주 끊겨요 (두 번째 만남용)", "아시안 퓨전은 메뉴 설명이 좋은 대화거리"],
+      any: ["메인 두 개 + 나눠 먹는 사이드 하나가 정석", "상대에게 먼저 고르게 하고, 못 먹는 음식 꼭 물어보기", "가격대 비슷한 메뉴로 맞추면 계산할 때도 편해요"]
+    }[cuisine || "any"];
+    const avoid = [
+      "손으로 들고 먹는 버거·립·게 요리 (첫 만남엔 손이 바빠요)",
+      "마늘·파 듬뿍 들어간 메뉴, 매운 짬뽕처럼 국물 튀는 음식",
+      "줄 서는 집: 웨이팅 30분이면 어색함도 30분",
+      o.drink === "no" ? "주류 주문 필수인 와인바 (매치스 등)" : "첫 잔부터 병 와인 (한두 잔 보고 결정)"
+    ];
+    const pay = [
+      "1차는 제안한 쪽이, 2차·카페는 다른 쪽이 내는 흐름이 무난해요",
+      "카페는 같이 주문하러 가서 고르는 시간도 대화가 돼요",
+      "다음 만남을 잡고 싶으면 \"다음엔 대전에서/노원에서\"로 자연스럽게"
+    ];
+    document.getElementById("menuTips").innerHTML = `
+      <div class="menu-card good"><h3>👍 이런 메뉴 좋아요</h3><ul>${good.map((x) => `<li>${esc(x)}</li>`).join("")}</ul></div>
+      <div class="menu-card bad"><h3>🙅 첫 만남엔 피하기</h3><ul>${avoid.map((x) => `<li>${esc(x)}</li>`).join("")}</ul></div>
+      <div class="menu-card" style="grid-column:1/-1"><h3>💳 계산 & 마무리</h3><ul>${pay.map((x) => `<li>${esc(x)}</li>`).join("")}</ul></div>`;
+  }
+
+  function renderRoute(o, r) {
+    const firstZone = (r.items.find((x) => x.kind === "place") || {}).p?.zone || "S";
+    const meetStation = { S: "서울숲역", A: "서울숲역", T: "뚝섬역", Y: "성수역", H: "뚝섬유원지역" }[firstZone];
+    document.getElementById("route").innerHTML = `
+      <div class="card"><b>📍 만나는 곳: ${meetStation}</b><p>첫 장소가 ${ZONE_NAME[firstZone]} 쪽이라 ${meetStation}에서 만나는 게 동선이 제일 짧아요.</p></div>
+      <div class="card"><b>🚄 대전 우씨</b><p>올 때: SRT 대전 → 수서 (약 1시간) → 수인분당선 수서 → 서울숲역 (환승 없이 약 25분)${meetStation !== "서울숲역" ? ` → ${meetStation}` : ""}.<br>갈 때: 서울숲역에서 수인분당선 → 수서 → SRT. ${o.train ? `<b>${o.train} 기차면 늦어도 ${hhmm(toMin(o.train) - 40)}엔 서울숲역에서 출발</b>하세요.` : "기차 시간을 정하면 코스가 거기에 맞춰져요."}<br>KTX를 탄다면 서울역 도착 기준으로 이동이 40분 정도 더 걸려요.</p></div>
+      <div class="card"><b>🚇 노원</b><p>7호선 노원 → 건대입구에서 2호선 환승 → 성수·뚝섬 (약 45분 안팎). 뚝섬한강공원 쪽이면 7호선 뚝섬유원지역에서 바로 내려요.<br>귀가도 같은 길로. 마무리 장소가 성수역 쪽이면 2호선 → 건대입구 → 7호선이 편해요.</p></div>`;
+  }
+
+  function renderChecklist(o, r) {
+    const items = [];
+    const places = r.items.filter((x) => x.kind === "place").map((x) => x.p);
+    places.filter((p) => ["peeps", "uovo", "ssook", "concasse", "nanpo"].includes(p.id)).forEach((p) => items.push(`${p.name} 예약 (캐치테이블·네이버 예약 확인)`));
+    items.push("네이버지도에서 코스 장소들 영업시간·휴무 다시 확인");
+    if (o.train) items.push(`우씨 SRT ${o.train} 수서 출발 표 예매 (주말 저녁 표는 빨리 매진돼요)`);
+    if (places.some((p) => p.outdoor) && o.weather !== "bad") items.push("전날 날씨 확인: 비 예보면 '비·추위'로 다시 짜기");
+    items.push("각 장소 후보 하나씩 기억해 두기 (만석이면 '다른 후보' 버튼 참고)");
+    items.push("상대가 못 먹는 음식 미리 물어보기");
+    document.getElementById("checklist").innerHTML = items.map((x, i) => `<li><label><input type="checkbox" id="c${i}"> ${esc(x)}</label></li>`).join("");
+  }
+
+  // ---------------- Share ----------------
+  function planText() {
+    const o = lastOpts, r = lastPlan;
+    const lines = [`💌 성수 소개팅 코스 (${o.start} 시작${o.date ? ", " + o.date : ""})`];
+    r.items.filter((x) => x.kind === "place").forEach((x) => {
+      lines.push(`${hhmm(x.time)} ${KIND_LABEL[x.p.type]} · ${x.p.name}${x.p.order ? " (" + x.p.order + ")" : ""}`);
+    });
+    lines.push(`${hhmm(Math.min(r.end, r.endBy))} 마무리${o.train ? ` · 우씨 ${o.train} SRT` : ""}`);
+    return lines.join("\n");
+  }
+  const toast = () => { const t = document.getElementById("toast"); t.classList.add("show"); setTimeout(() => t.classList.remove("show"), 1500); };
+  function copy(text) {
+    if (navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(text).then(toast, () => fallback(text));
+    else fallback(text);
+  }
+  function fallback(text) {
+    const ta = document.createElement("textarea"); ta.value = text; ta.style.position = "fixed"; ta.style.opacity = "0";
+    document.body.appendChild(ta); ta.select(); try { document.execCommand("copy"); toast(); } catch (e) { /* ignore */ } ta.remove();
+  }
+  document.getElementById("copyBtn").onclick = () => copy(planText());
+  document.getElementById("linkBtn").onclick = () => copy(location.href);
+
+  // ---------------- Restore from link ----------------
+  (function restore() {
+    if (!location.hash.slice(1)) return;
+    const q = new URLSearchParams(location.hash.slice(1));
+    ["start", "vibe", "food", "drink", "budget", "weather"].forEach((k) => q.get(k) && setSeg(k, q.get(k)));
+    if (q.get("date")) document.getElementById("date").value = q.get("date");
+    if (q.has("train")) trainSel.value = q.get("train");
+    (q.get("ov") || "").split(",").filter(Boolean).forEach((pair) => { const [k, v] = pair.split(":"); if (byId[v]) overrides[k] = v; });
+    run(readForm());
+  })();
+})();
+</script>
+</body>
+</html>
