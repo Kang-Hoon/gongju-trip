@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Gongju Day — 10 Questions</title>
+<meta name="description" content="Answer 10 quick questions and get a Gongju day trip planned around your taste.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&family=Noto+Sans+TC:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #f7f1e6;
+    --card: #fffaf2;
+    --ink: #2b2118;
+    --muted: #7a6a58;
+    --maple: #b8402a;
+    --maple-soft: #f1d6cc;
+    --chestnut: #6b4226;
+    --gold: #c99a3b;
+    --line: #e6dccb;
+    --radius: 18px;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    font-family: "Inter", "Noto Sans TC", system-ui, sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    min-height: 100vh;
+    line-height: 1.5;
+    background-image:
+      radial-gradient(circle at 10% 0%, rgba(184,64,42,0.10), transparent 40%),
+      radial-gradient(circle at 100% 100%, rgba(201,154,59,0.12), transparent 45%);
+    background-attachment: fixed;
+  }
+  .wrap { max-width: 640px; margin: 0 auto; padding: 28px 20px 60px; }
+  .zh { font-family: "Noto Sans TC", sans-serif; color: var(--muted); font-size: 0.92em; display: block; margin-top: 2px; }
+  h1, h2, h3 { font-family: "Fraunces", Georgia, serif; font-weight: 700; letter-spacing: -0.01em; margin: 0; }
+
+  /* Intro */
+  .hero { text-align: left; padding-top: 24px; }
+  .eyebrow { font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--maple); }
+  .hero h1 { font-size: clamp(34px, 8vw, 50px); line-height: 1.05; margin: 12px 0 14px; }
+  .hero h1 em { font-style: normal; color: var(--maple); }
+  .hero p { font-size: 17px; color: #4a3d30; margin: 0 0 8px; }
+  .leaf-row { display: flex; gap: 8px; margin: 26px 0 30px; font-size: 26px; }
+  .facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 22px 0 30px; }
+  .fact { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 12px; font-size: 13px; color: var(--muted); }
+  .fact b { display: block; font-family: "Fraunces", serif; font-size: 20px; color: var(--ink); }
+
+  .btn {
+    appearance: none; border: 0; cursor: pointer;
+    font: 600 16px "Inter", sans-serif;
+    padding: 15px 26px; border-radius: 999px;
+    background: var(--maple); color: #fff;
+    box-shadow: 0 6px 18px rgba(184,64,42,0.25);
+    transition: transform .15s ease, box-shadow .15s ease, background .15s;
+  }
+  .btn:hover { transform: translateY(-1px); box-shadow: 0 8px 22px rgba(184,64,42,0.3); }
+  .btn:active { transform: translateY(0); }
+  .btn.ghost { background: transparent; color: var(--ink); box-shadow: none; border: 1px solid var(--line); }
+  .btn.ghost:hover { background: var(--card); }
+  .btn.dark { background: var(--chestnut); box-shadow: 0 6px 18px rgba(107,66,38,0.25); }
+  .btn.whatsapp { background: #1f8f4e; box-shadow: 0 6px 18px rgba(31,143,78,0.25); }
+
+  /* Quiz */
+  .topbar { display: flex; align-items: center; gap: 14px; margin-bottom: 26px; }
+  .back { background: none; border: 0; font-size: 22px; cursor: pointer; color: var(--muted); padding: 4px 8px; border-radius: 8px; }
+  .back:disabled { opacity: 0.25; cursor: default; }
+  .progress { flex: 1; height: 6px; background: var(--line); border-radius: 99px; overflow: hidden; }
+  .progress span { display: block; height: 100%; background: linear-gradient(90deg, var(--gold), var(--maple)); width: 0; transition: width .35s ease; border-radius: 99px; }
+  .count { font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; min-width: 42px; text-align: right; }
+
+  .qcard { animation: rise .35s ease; }
+  @keyframes rise { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+  .qnum { font-family: "Fraunces", serif; color: var(--maple); font-size: 15px; margin-bottom: 8px; }
+  .qcard h2 { font-size: clamp(24px, 5.5vw, 30px); line-height: 1.2; }
+  .qcard .hint { color: var(--muted); font-size: 14px; margin: 10px 0 0; }
+  .options { display: grid; gap: 10px; margin-top: 24px; }
+  .opt {
+    display: flex; align-items: center; gap: 14px; text-align: left;
+    background: var(--card); border: 1.5px solid var(--line); border-radius: var(--radius);
+    padding: 14px 16px; cursor: pointer; font: inherit; color: inherit;
+    transition: border-color .15s, transform .15s, background .15s;
+  }
+  .opt:hover { border-color: var(--gold); transform: translateY(-1px); }
+  .opt.selected { border-color: var(--maple); background: #fff3ee; }
+  .opt .emo { font-size: 26px; width: 36px; text-align: center; flex-shrink: 0; }
+  .opt .txt { font-weight: 500; font-size: 16px; }
+  .opt .txt .zh { font-weight: 400; font-size: 13.5px; }
+
+  /* Result */
+  .result-hero { background: var(--chestnut); color: #fbefe0; border-radius: 24px; padding: 28px 24px; position: relative; overflow: hidden; }
+  .result-hero::after { content: "🍁"; position: absolute; right: -10px; top: -18px; font-size: 120px; opacity: 0.16; transform: rotate(18deg); }
+  .result-hero .eyebrow { color: var(--gold); }
+  .result-hero h1 { font-size: clamp(30px, 7vw, 40px); margin: 10px 0 8px; line-height: 1.1; }
+  .result-hero p { margin: 0; color: #e8d6c1; }
+  .result-hero .zh { color: #cdb59a; }
+
+  section.block { margin-top: 30px; }
+  section.block h3 { font-size: 22px; margin-bottom: 14px; }
+
+  .bars { display: grid; gap: 10px; }
+  .bar { display: grid; grid-template-columns: 120px 1fr 34px; align-items: center; gap: 10px; font-size: 14px; }
+  .bar .track { height: 10px; background: var(--line); border-radius: 99px; overflow: hidden; }
+  .bar .fill { height: 100%; background: var(--maple); border-radius: 99px; width: 0; transition: width .8s cubic-bezier(.2,.8,.2,1); }
+  .bar .pct { color: var(--muted); font-variant-numeric: tabular-nums; text-align: right; font-size: 13px; }
+
+  .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+  .tag { background: var(--maple-soft); color: #7a2616; padding: 6px 12px; border-radius: 99px; font-size: 13.5px; font-weight: 500; }
+
+  .timeline { list-style: none; margin: 0; padding: 0; position: relative; }
+  .timeline::before { content: ""; position: absolute; left: 58px; top: 8px; bottom: 8px; width: 2px; background: var(--line); }
+  .stop { display: grid; grid-template-columns: 50px 20px 1fr; gap: 8px; padding: 10px 0; align-items: start; }
+  .stop .time { font-variant-numeric: tabular-nums; font-weight: 600; font-size: 14px; color: var(--chestnut); padding-top: 2px; }
+  .stop .dot { width: 12px; height: 12px; border-radius: 50%; background: var(--card); border: 3px solid var(--maple); margin: 5px 0 0 2px; position: relative; z-index: 1; }
+  .stop .what b { display: block; font-size: 16px; }
+  .stop .what span { color: var(--muted); font-size: 14px; }
+
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px; }
+  .food-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .food { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 14px; }
+  .food .emo { font-size: 24px; }
+  .food b { display: block; margin-top: 4px; }
+  .food span { font-size: 13.5px; color: var(--muted); }
+
+  .tips { margin: 0; padding-left: 20px; }
+  .tips li { margin-bottom: 8px; }
+
+  .share { margin-top: 34px; background: #fff; border: 2px dashed var(--gold); border-radius: 22px; padding: 22px; text-align: center; }
+  .share h3 { font-size: 22px; }
+  .share p { color: var(--muted); margin: 6px 0 18px; font-size: 15px; }
+  .share .row { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+  .toast { position: fixed; left: 50%; bottom: 26px; transform: translateX(-50%) translateY(20px); background: var(--ink); color: #fff; padding: 10px 18px; border-radius: 99px; font-size: 14px; opacity: 0; transition: all .25s; pointer-events: none; }
+  .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+  .restart { margin-top: 22px; text-align: center; }
+  footer { text-align: center; font-size: 12.5px; color: var(--muted); margin-top: 40px; }
+  .hidden { display: none !important; }
+
+  @media (max-width: 480px) {
+    .facts { grid-template-columns: 1fr 1fr 1fr; }
+    .food-grid { grid-template-columns: 1fr; }
+    .bar { grid-template-columns: 100px 1fr 30px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- INTRO -->
+  <div id="intro" class="hero">
+    <div class="eyebrow">A day trip from Daejeon · 大田出發一日遊</div>
+    <h1>Hey <span id="nameSlot">Michael</span>,<br>let's plan your <em>Gongju</em> day.</h1>
+    <p>Answer 10 quick questions — like twenty questions, only shorter — and I'll build a Gongju itinerary around what you actually like.</p>
+    <span class="zh">回答十條簡單問題，我會按你嘅喜好安排公州一日行程。</span>
+    <div class="facts">
+      <div class="fact"><b>10</b>questions</div>
+      <div class="fact"><b>~2</b>minutes</div>
+      <div class="fact"><b>1</b>custom route</div>
+    </div>
+    <button class="btn" id="startBtn">Let's go →</button>
+    <p style="margin-top:22px;font-size:14px;color:var(--muted)">Gongju was the capital of the Baekje Kingdom 1,500 years ago. Today it's fortress walls, royal tombs, a mountain temple, and a lot of chestnuts. 🌰</p>
+  </div>
+
+  <!-- QUIZ -->
+  <div id="quiz" class="hidden">
+    <div class="topbar">
+      <button class="back" id="backBtn" aria-label="Previous question">←</button>
+      <div class="progress"><span id="progressBar"></span></div>
+      <div class="count" id="count">1 / 10</div>
+    </div>
+    <div id="qslot"></div>
+  </div>
+
+  <!-- RESULT -->
+  <div id="result" class="hidden"></div>
+
+  <footer>Made by Ken for a friend visiting from Hong Kong · 🇭🇰 → 🇰🇷</footer>
+</div>
+<div class="toast" id="toast">Copied!</div>
+
+<script>
+(function () {
+  "use strict";
+
+  // ---------- Config ----------
+  const params = new URLSearchParams(location.search);
+  const GUEST = (params.get("name") || "Michael").slice(0, 30);
+  const HOST = (params.get("host") || "Ken").slice(0, 30);
+  const HOST_WA = (params.get("wa") || "").replace(/[^0-9]/g, ""); // optional WhatsApp number, digits only
+
+  document.getElementById("nameSlot").textContent = GUEST;
+
+  // Dimensions scored by the quiz
+  const DIMS = {
+    history: "History",
+    nature:  "Nature & leaves",
+    food:    "Street food",
+    cafe:    "Cafés & design",
+    photo:   "Photo spots",
+    calm:    "Calm & tradition",
+    active:  "Up for walking"
+  };
+
+  // ---------- Questions ----------
+  const QUESTIONS = [
+    {
+      q: "Your ideal free Saturday in Hong Kong looks like…",
+      zh: "喺香港，你最理想嘅星期六係點？",
+      opts: [
+        { e: "🥾", t: "Hiking Dragon's Back, then a beach", zh: "行龍脊，再去沙灘", s: { nature: 2, active: 2 } },
+        { e: "🥟", t: "Dim sum, then eating my way through Sham Shui Po", zh: "飲茶，再去深水埗搵食", s: { food: 3 } },
+        { e: "🏛️", t: "Tai Kwun or a museum, old buildings", zh: "大館或者博物館，睇舊建築", s: { history: 3 } },
+        { e: "☕", t: "A slow coffee in a quiet Sheung Wan café", zh: "喺上環靜靜哋飲杯咖啡", s: { cafe: 3, calm: 1 } }
+      ]
+    },
+    {
+      q: "It's autumn-leaf season in Korea right now. How excited are you?",
+      zh: "而家係韓國紅葉季節，你有幾期待？",
+      hint: "Hong Kong doesn't really do red maples — Gongju does.",
+      opts: [
+        { e: "🍁", t: "Very! I want proper red-and-gold trees", zh: "超期待！想睇真正嘅紅葉", s: { nature: 3, photo: 1 } },
+        { e: "🙂", t: "Nice bonus if we see some", zh: "見到就好，唔強求", s: { nature: 1 } },
+        { e: "🤷", t: "Trees are trees", zh: "樹就係樹啦", s: { food: 1, cafe: 1 } }
+      ]
+    },
+    {
+      q: "How much spice can you handle?",
+      zh: "你食得幾辣？",
+      key: "spice",
+      opts: [
+        { e: "🔥", t: "Bring it on — the redder the better", zh: "越辣越好", v: "high", s: { food: 1 } },
+        { e: "🌶️", t: "Some kick is fine", zh: "小辣OK", v: "mid", s: {} },
+        { e: "🥛", t: "Mild please, I'm a cha chaan teng person", zh: "唔辣唔該，我係茶餐廳派", v: "low", s: {} }
+      ]
+    },
+    {
+      q: "Pick a Korean lunch.",
+      zh: "揀一個韓式午餐。",
+      key: "lunch",
+      opts: [
+        { e: "🥗", t: "Bibimbap with wild mountain greens", zh: "山菜拌飯", v: "sanchae", s: { calm: 1, nature: 1 } },
+        { e: "🍲", t: "A hot bowl of beef soup with rice (gukbap)", zh: "牛肉湯飯", v: "gukbap", s: { food: 1 } },
+        { e: "🥩", t: "Korean BBQ, grill it at the table", zh: "韓式燒肉", v: "bbq", s: { food: 2 } },
+        { e: "🍜", t: "Knife-cut noodles in broth (kalguksu)", zh: "刀切麵", v: "noodle", s: { food: 1 } }
+      ]
+    },
+    {
+      q: "1,500-year-old royal tombs and gold crowns from a lost kingdom…",
+      zh: "1,500年前失落王國嘅王陵同金冠……",
+      opts: [
+        { e: "👑", t: "Fascinating — tell me everything", zh: "好有興趣，講多啲！", s: { history: 3 } },
+        { e: "📸", t: "Quick look and a photo is enough", zh: "睇一陣、影張相就夠", s: { history: 1, photo: 1 } },
+        { e: "😴", t: "Honestly, show me something alive", zh: "老實講，想睇啲有生氣嘅嘢", s: { food: 1, cafe: 1 } }
+      ]
+    },
+    {
+      q: "How much walking sounds good for one day?",
+      zh: "一日行幾多路你覺得OK？",
+      key: "walk",
+      opts: [
+        { e: "🏃", t: "15,000+ steps, I live on MTR stairs", zh: "一萬五千步以上，冇問題", v: "high", s: { active: 3 } },
+        { e: "🚶", t: "A normal amount, with breaks", zh: "正常，中間休息下", v: "mid", s: { active: 1 } },
+        { e: "🪑", t: "Minimal — more sitting, more snacks", zh: "越少越好，坐多啲食多啲", v: "low", s: { cafe: 1, food: 1 } }
+      ]
+    },
+    {
+      q: "In your friend group, you're the one who…",
+      zh: "喺朋友圈入面，你係……",
+      opts: [
+        { e: "📷", t: "Takes all the photos (and the IG stories)", zh: "負責影晒所有相同IG story", s: { photo: 3 } },
+        { e: "🗺️", t: "Reads every sign and plaque", zh: "每塊介紹牌都要睇", s: { history: 2 } },
+        { e: "🍢", t: "Finds the best snack stall", zh: "搵到最好食嘅小食檔", s: { food: 2 } },
+        { e: "🧘", t: "Just enjoys the moment", zh: "享受當下就夠", s: { calm: 2 } }
+      ]
+    },
+    {
+      q: "Gongju is Korea's chestnut capital. Your move?",
+      zh: "公州係韓國栗子之都，你會點？",
+      key: "chestnut",
+      opts: [
+        { e: "🌰", t: "Roasted chestnuts from a street stall — like 糖炒栗子", zh: "街邊炒栗子，好似香港咁", v: "street", s: { food: 2 } },
+        { e: "🍰", t: "Chestnut cake or latte in a nice café", zh: "去靚cafe食栗子蛋糕或者栗子latte", v: "cafe", s: { cafe: 2 } },
+        { e: "🍶", t: "Chestnut makgeolli (rice wine)", zh: "栗子米酒", v: "makgeolli", s: { food: 2 } },
+        { e: "🙅", t: "Not a chestnut person", zh: "我唔鍾意食栗子", v: "none", s: {} }
+      ]
+    },
+    {
+      q: "A 1,000-year-old mountain temple: monks, incense, a quiet valley.",
+      zh: "一千年歷史嘅山中古寺：僧人、香火、寧靜山谷。",
+      opts: [
+        { e: "🛕", t: "Yes — that calm is exactly what I want", zh: "正！我就係想要嗰種寧靜", s: { calm: 3, nature: 1 } },
+        { e: "👍", t: "Sounds nice, if it fits", zh: "幾好，有時間就去", s: { calm: 1 } },
+        { e: "🙃", t: "I've seen enough temples", zh: "寺廟睇夠喇", s: { cafe: 1, history: 1 } }
+      ]
+    },
+    {
+      q: "How should the day end?",
+      zh: "你想一日點樣完結？",
+      opts: [
+        { e: "🌇", t: "Sunset over the river from an old fortress wall", zh: "喺古城牆上睇河邊日落", s: { photo: 2, history: 1, active: 1 } },
+        { e: "🏮", t: "Wandering a traditional market, snacking", zh: "行傳統市場，周圍食", s: { food: 3 } },
+        { e: "🕯️", t: "A cosy café and little shops", zh: "溫暖嘅cafe同小店", s: { cafe: 3 } },
+        { e: "🍽️", t: "A big dinner, then rest", zh: "食餐好，然後休息", s: { food: 1, calm: 1 } }
+      ]
+    }
+  ];
+
+  // ---------- Routes ----------
+  // Pickup in Daejeon ~11:00, back in Daejeon ~19:00. Sunset mid-Nov ≈ 17:20.
+  const ROUTES = {
+    maple: {
+      title: "Maples, Monks & a Fortress Sunset",
+      zh: "紅葉、古寺、城牆日落",
+      blurb: "You came for autumn. This route goes straight to the mountain temple while the leaves are glowing, then catches sunset on the fortress wall.",
+      w: { nature: 2, calm: 1.5, photo: 1, active: 0.5 },
+      stops: (a) => [
+        ["11:00", "Leave Daejeon", "About an hour's drive to Magoksa Temple"],
+        ["12:00", "Lunch by Magoksa", lunchLine(a, "temple")],
+        ["13:00", "Magoksa Temple 麻谷寺", "UNESCO-listed mountain temple. Walk the valley path under the maples"],
+        ["14:45", "Royal Tombs of King Muryeong", "A quick look at Baekje's royal tombs, 30 min drive back to town"],
+        ["15:45", "Gongsanseong Fortress 公山城", walkLine(a, "Walk the wall above the Geum River as the sun goes down")],
+        ["17:15", "Sanseong Market", chestnutLine(a)],
+        ["18:00", "Dinner around Jeminchen", "Old-town streets with cafés and restaurants, then drive home"]
+      ]
+    },
+    baekje: {
+      title: "The Lost Kingdom of Baekje",
+      zh: "百濟失落王國之旅",
+      blurb: "You like knowing the story behind a place. This route skips the drive to the temple and spends the time on Gongju's royal history.",
+      w: { history: 2.2, photo: 0.6, active: 0.4 },
+      stops: (a) => [
+        ["11:00", "Leave Daejeon", "About 40 minutes to Gongju town"],
+        ["11:45", "Lunch in town", lunchLine(a, "town")],
+        ["12:45", "Gongju National Museum", "Gold crowns and treasures found in King Muryeong's tomb. Free entry"],
+        ["14:15", "Royal Tombs of King Muryeong", "Right next door. A UNESCO site with a replica of the tomb chamber"],
+        ["15:30", "Gongsanseong Fortress 公山城", walkLine(a, "The Baekje royal fortress. Walk the wall and catch sunset over the river")],
+        ["17:15", "Sanseong Market", chestnutLine(a)],
+        ["18:00", "Dinner around Jeminchen", "A relaxed dinner in the old town, then drive home"]
+      ]
+    },
+    snack: {
+      title: "Chestnuts, Cafés & Old-Town Strolls",
+      zh: "栗子、Cafe、老城散步",
+      blurb: "You travel with your stomach and like a slower pace. This route stays in town: good food, café stops and one perfect sunset.",
+      w: { food: 1.6, cafe: 2, calm: 0.4, active: -0.6 },
+      stops: (a) => [
+        ["11:00", "Leave Daejeon", "About 40 minutes to Gongju town"],
+        ["11:45", "Lunch around Jeminchen", lunchLine(a, "town")],
+        ["13:00", "Gongju Hanok Village", "Traditional Korean houses, nice for a slow stroll and photos"],
+        ["14:00", "Royal Tombs of King Muryeong", "Short and easy: the highlights of Baekje in 45 minutes"],
+        ["15:00", "Café break on Jeminchen", "Gongju's chestnut desserts: cakes, lattes, chestnut bread"],
+        ["16:15", "Gongsanseong Fortress 公山城", walkLine(a, "A short section of the wall for the sunset view over the river")],
+        ["17:20", "Sanseong Market", chestnutLine(a) + ". Then dinner and drive home"]
+      ]
+    }
+  };
+
+  function lunchLine(a, where) {
+    const spice = a.spice || "mid";
+    const map = {
+      sanchae: where === "temple"
+        ? "Mountain-greens bibimbap, the classic meal outside the temple gate"
+        : "Bibimbap with mountain greens",
+      gukbap: "Hot beef gukbap (soup and rice), a Gongju favourite",
+      bbq: where === "temple"
+        ? "Grilled pork or duck at the restaurants by the temple"
+        : "Korean BBQ, grilled at the table",
+      noodle: "Kalguksu, knife-cut noodles in broth"
+    };
+    let line = map[a.lunch] || map.sanchae;
+    if (spice === "low") line += ". We'll ask for no gochujang on the side";
+    if (spice === "high") line += ". Extra gochujang for you 🔥";
+    return line;
+  }
+  function walkLine(a, base) {
+    if (a.walk === "low") return base.replace("Walk the wall", "Walk a short, flat part of the wall");
+    if (a.walk === "high") return base + ". We'll do the full loop";
+    return base;
+  }
+  function chestnutLine(a) {
+    switch (a.chestnut) {
+      case "street": return "Roasted chestnuts and injeolmi rice cake, Korea's answer to 糖炒栗子";
+      case "cafe": return "Pick up chestnut bread and injeolmi to take home";
+      case "makgeolli": return "Chestnut makgeolli and market snacks (Ken drives, you drink 🍶)";
+      case "none": return "Injeolmi rice cake. Gongju claims to be where it was named";
+      default: return "Injeolmi rice cake and chestnut snacks";
+    }
+  }
+
+  // ---------- State ----------
+  let idx = 0;
+  const picks = new Array(QUESTIONS.length).fill(null);
+
+  const $ = (id) => document.getElementById(id);
+  const intro = $("intro"), quiz = $("quiz"), result = $("result");
+
+  $("startBtn").addEventListener("click", () => {
+    intro.classList.add("hidden");
+    quiz.classList.remove("hidden");
+    renderQ();
+  });
+  $("backBtn").addEventListener("click", () => {
+    if (idx > 0) { idx--; renderQ(); }
+  });
+
+  function esc(s) {
+    return String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  }
+
+  function renderQ() {
+    const Q = QUESTIONS[idx];
+    $("count").textContent = (idx + 1) + " / " + QUESTIONS.length;
+    $("progressBar").style.width = ((idx) / QUESTIONS.length * 100) + "%";
+    $("backBtn").disabled = idx === 0;
+
+    const html = [
+      '<div class="qcard">',
+      '<div class="qnum">Question ' + (idx + 1) + '</div>',
+      '<h2>' + esc(Q.q) + '<span class="zh">' + esc(Q.zh) + '</span></h2>',
+      Q.hint ? '<p class="hint">' + esc(Q.hint) + '</p>' : '',
+      '<div class="options">',
+      Q.opts.map((o, i) =>
+        '<button class="opt' + (picks[idx] === i ? ' selected' : '') + '" data-i="' + i + '">' +
+        '<span class="emo">' + o.e + '</span>' +
+        '<span class="txt">' + esc(o.t) + '<span class="zh">' + esc(o.zh) + '</span></span>' +
+        '</button>'
+      ).join(""),
+      '</div></div>'
+    ].join("");
+    $("qslot").innerHTML = html;
+
+    $("qslot").querySelectorAll(".opt").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        picks[idx] = Number(btn.dataset.i);
+        btn.classList.add("selected");
+        setTimeout(() => {
+          if (idx < QUESTIONS.length - 1) { idx++; renderQ(); }
+          else { finish(); }
+        }, 220);
+      });
+    });
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  // ---------- Scoring ----------
+  function compute() {
+    const score = {}; Object.keys(DIMS).forEach((k) => (score[k] = 0));
+    const max = {}; Object.keys(DIMS).forEach((k) => (max[k] = 0));
+    const answers = {};
+    QUESTIONS.forEach((Q, qi) => {
+      // max possible per dim for this question
+      Object.keys(DIMS).forEach((k) => {
+        max[k] += Math.max(0, ...Q.opts.map((o) => (o.s && o.s[k]) || 0));
+      });
+      const o = Q.opts[picks[qi]];
+      if (!o) return;
+      Object.entries(o.s || {}).forEach(([k, v]) => (score[k] += v));
+      if (Q.key) answers[Q.key] = o.v;
+    });
+    const pct = {};
+    Object.keys(DIMS).forEach((k) => (pct[k] = max[k] ? Math.round(score[k] / max[k] * 100) : 0));
+
+    const ranked = Object.entries(ROUTES).map(([id, r]) => {
+      let s = 0; Object.entries(r.w).forEach(([k, w]) => (s += w * pct[k]));
+      return { id, s };
+    }).sort((a, b) => b.s - a.s);
+
+    return { pct, answers, routeId: ranked[0].id, runnerUp: ranked[1].id };
+  }
+
+  function persona(pct) {
+    const top = Object.entries(pct).sort((a, b) => b[1] - a[1]).slice(0, 2).map((x) => x[0]);
+    const names = {
+      history: "Time Traveller", nature: "Leaf Chaser", food: "Snack Hunter",
+      cafe: "Café Drifter", photo: "Golden-Hour Shooter", calm: "Quiet Wanderer", active: "Trail Walker"
+    };
+    const zh = {
+      history: "時光旅人", nature: "追紅葉的人", food: "搵食專家",
+      cafe: "Cafe漫遊者", photo: "黃金時刻攝影師", calm: "靜心旅人", active: "行山達人"
+    };
+    return { en: names[top[0]], zh: zh[top[0]], second: DIMS[top[1]] };
+  }
+
+  function tagsFor(pct, a) {
+    const t = [];
+    const sorted = Object.entries(pct).sort((x, y) => y[1] - x[1]);
+    sorted.slice(0, 3).forEach(([k]) => t.push(DIMS[k]));
+    t.push({ high: "Spice: bring it 🔥", mid: "Spice: medium 🌶️", low: "Spice: mild 🥛" }[a.spice] || "Spice: medium");
+    t.push({ high: "Long walks OK", mid: "Moderate walking", low: "Keep walking short" }[a.walk] || "Moderate walking");
+    return t;
+  }
+
+  function foodsFor(a) {
+    const out = [];
+    const L = {
+      sanchae: ["🥗", "Sanchae bibimbap", "Rice with wild mountain greens, the dish people eat outside Magoksa"],
+      gukbap: ["🍲", "Gukbap", "Beef soup with rice, simple and warming on a November day"],
+      bbq: ["🥩", "Korean BBQ", "Pork or beef grilled at the table, with lettuce wraps"],
+      noodle: ["🍜", "Kalguksu", "Knife-cut noodles in a light broth"]
+    };
+    out.push(L[a.lunch] || L.sanchae);
+    out.push(a.chestnut === "none"
+      ? ["🍡", "Injeolmi", "Soft rice cake rolled in roasted soybean powder"]
+      : ["🌰", "Gongju chestnuts", { street: "Roasted chestnuts from a market stall", cafe: "Chestnut cake and lattes on Jeminchen", makgeolli: "Chestnut makgeolli, slightly sweet rice wine" }[a.chestnut] || "Chestnut bread and roasted chestnuts"]);
+    if (a.spice === "high") out.push(["🌶️", "Jjamppong", "Korea's fiery seafood noodle soup, if you want a spicy dinner"]);
+    else if (a.spice === "low") out.push(["🥢", "Bulgogi", "Sweet soy-marinated beef, no spice at all"]);
+    else out.push(["🥘", "Doenjang jjigae", "Soybean-paste stew, savoury with a little kick"]);
+    out.push(a.chestnut === "none"
+      ? ["🥞", "Hotteok", "Warm sweet pancake with brown-sugar filling, a winter street snack"]
+      : ["🍡", "Injeolmi & bam-ppang", "Rice cake and chestnut-shaped bread to take home"]);
+    // de-dup
+    const seen = new Set();
+    return out.filter((f) => !seen.has(f[1]) && seen.add(f[1])).slice(0, 4);
+  }
+
+  function tipsFor(pct, a) {
+    const t = [];
+    t.push("Bring a warm jacket. November in Korea is colder than Hong Kong, around 5–12°C and colder after sunset.");
+    if (a.walk !== "low") t.push("Wear comfy shoes: the fortress wall path has uneven stone steps.");
+    if (pct.photo >= 50) t.push("Best photo moment: Gongsanseong's wall at sunset, around 5 pm, looking over the Geum River.");
+    if (pct.nature >= 50) t.push("Leaves peak around mid-November, so we're right on time. 🍁");
+    if (a.spice === "low") t.push("Korean side dishes can be spicy. Just ask: \"an maepge haejuseyo\" (not spicy, please).");
+    t.push("One ticket covers King Muryeong's Tombs, Gongsanseong and Seokjang-ri Museum.");
+    return t;
+  }
+
+  // ---------- Result ----------
+  function finish() {
+    $("progressBar").style.width = "100%";
+    const { pct, answers, routeId, runnerUp } = compute();
+    const R = ROUTES[routeId];
+    const P = persona(pct);
+    const stops = R.stops(answers);
+
+    const bars = Object.entries(pct).sort((a, b) => b[1] - a[1]).map(([k, v]) =>
+      '<div class="bar"><span>' + DIMS[k] + '</span><div class="track"><div class="fill" data-w="' + v + '"></div></div><span class="pct">' + v + '</span></div>'
+    ).join("");
+
+    const html = [
+      '<div class="result-hero">',
+      '<div class="eyebrow">' + esc(GUEST) + '\'s travel type</div>',
+      '<h1>' + esc(P.en) + '<span class="zh">' + esc(P.zh) + '</span></h1>',
+      '<p>with a strong side of <b>' + esc(P.second.toLowerCase()) + '</b>.</p>',
+      '</div>',
+
+      '<section class="block"><h3>Your taste profile</h3><div class="card"><div class="bars">' + bars + '</div></div>',
+      '<div class="tags" style="margin-top:14px">' + tagsFor(pct, answers).map((t) => '<span class="tag">' + esc(t) + '</span>').join("") + '</div></section>',
+
+      '<section class="block"><h3>Your route: ' + esc(R.title) + '<span class="zh">' + esc(R.zh) + '</span></h3>',
+      '<p style="margin:0 0 14px;color:#4a3d30">' + esc(R.blurb) + '</p>',
+      '<div class="card"><ol class="timeline">' + stops.map((s) =>
+        '<li class="stop"><span class="time">' + s[0] + '</span><span class="dot"></span><span class="what"><b>' + esc(s[1]) + '</b><span>' + esc(s[2]) + '</span></span></li>'
+      ).join("") + '</ol></div>',
+      '<p style="font-size:13.5px;color:var(--muted);margin-top:10px">Close second: <i>' + esc(ROUTES[runnerUp].title) + '</i>. Ken can mix in a stop from it.</p></section>',
+
+      '<section class="block"><h3>Things to eat</h3><div class="food-grid">' + foodsFor(answers).map((f) =>
+        '<div class="food"><div class="emo">' + f[0] + '</div><b>' + esc(f[1]) + '</b><span>' + esc(f[2]) + '</span></div>'
+      ).join("") + '</div></section>',
+
+      '<section class="block"><h3>Good to know</h3><div class="card"><ul class="tips">' + tipsFor(pct, answers).map((t) => '<li>' + esc(t) + '</li>').join("") + '</ul></div></section>',
+
+      '<div class="share"><h3>Send this to ' + esc(HOST) + ' 📮</h3>',
+      '<p>So ' + esc(HOST) + ' can lock in the plan (and book the right lunch).</p>',
+      '<div class="row">',
+      '<button class="btn whatsapp" id="waBtn">Send on WhatsApp</button>',
+      '<button class="btn dark" id="shareBtn">Share…</button>',
+      '<button class="btn ghost" id="copyBtn">Copy text</button>',
+      '</div></div>',
+
+      '<div class="restart"><button class="btn ghost" id="redoBtn">↺ Retake the quiz</button></div>'
+    ].join("");
+
+    quiz.classList.add("hidden");
+    result.innerHTML = html;
+    result.classList.remove("hidden");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    requestAnimationFrame(() => setTimeout(() => {
+      result.querySelectorAll(".fill").forEach((f) => (f.style.width = f.dataset.w + "%"));
+    }, 60));
+
+    const summary = buildSummary(P, pct, answers, R, stops);
+    $("waBtn").addEventListener("click", () => {
+      const url = "https://wa.me/" + HOST_WA + "?text=" + encodeURIComponent(summary);
+      window.open(url, "_blank", "noopener");
+    });
+    $("shareBtn").addEventListener("click", async () => {
+      if (navigator.share) {
+        try { await navigator.share({ title: GUEST + "'s Gongju plan", text: summary }); } catch (e) { /* cancelled */ }
+      } else { copy(summary); }
+    });
+    $("copyBtn").addEventListener("click", () => copy(summary));
+    $("redoBtn").addEventListener("click", () => {
+      picks.fill(null); idx = 0;
+      result.classList.add("hidden"); quiz.classList.remove("hidden"); renderQ();
+    });
+  }
+
+  function buildSummary(P, pct, a, R, stops) {
+    const lines = [];
+    lines.push("🍁 " + GUEST + "'s Gongju quiz results");
+    lines.push("Type: " + P.en + " (" + P.zh + ")");
+    lines.push("");
+    lines.push("Profile: " + Object.entries(pct).sort((x, y) => y[1] - x[1]).map(([k, v]) => DIMS[k] + " " + v).join(" · "));
+    lines.push("");
+    lines.push("Answers:");
+    QUESTIONS.forEach((Q, i) => {
+      const o = Q.opts[picks[i]];
+      lines.push((i + 1) + ". " + Q.q + " → " + (o ? o.t : "-"));
+    });
+    lines.push("");
+    lines.push("Suggested route: " + R.title);
+    stops.forEach((s) => lines.push(s[0] + "  " + s[1]));
+    return lines.join("\n");
+  }
+
+  function copy(text) {
+    const done = () => { const t = $("toast"); t.classList.add("show"); setTimeout(() => t.classList.remove("show"), 1600); };
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(text).then(done, () => fallback(text, done));
+    } else { fallback(text, done); }
+  }
+  function fallback(text, done) {
+    const ta = document.createElement("textarea");
+    ta.value = text; ta.style.position = "fixed"; ta.style.opacity = "0";
+    document.body.appendChild(ta); ta.select();
+    try { document.execCommand("copy"); done(); } catch (e) { /* ignore */ }
+    document.body.removeChild(ta);
+  }
+})();
+</script>
+</body>
+</html>
