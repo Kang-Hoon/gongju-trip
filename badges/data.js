@@ -144,6 +144,15 @@ window.BADGES = [
     t: { ko: "동해의 끝", en: "Edge of the East Sea" }, d: { ko: "해안 절벽, 나리분지, 독도 (날씨 허락 시)", en: "Sea cliffs, Nari Basin, Dokdo (weather permitting)" } }
 ];
 
+// Bonus badges: cities in the K-Trip Planner that aren't in the top-50 list.
+// Appended at the end so existing collection links keep working.
+window.BADGES.push(
+  { id: "sejong", r: "chungcheong", ko: "세종", en: "Sejong", icon: "greenhouse", c: "#2F6A4E", plan: "sejong", bonus: true,
+    t: { ko: "정원도시 산책자", en: "Garden City Walker" }, d: { ko: "국립세종수목원, 세종호수공원, 금강보행교 야경", en: "National Sejong Arboretum, Sejong Lake Park, Geumgang bridge at night" } },
+  { id: "cheongju", r: "chungcheong", ko: "청주", en: "Cheongju", icon: "palette", c: "#8A5A3A", plan: "cheongju", bonus: true,
+    t: { ko: "수장고 감상가", en: "Art Vault Viewer" }, d: { ko: "국립현대미술관 청주, 수암골, 상당산성, 청남대", en: "MMCA Cheongju, Suamgol, Sangdangsanseong, Cheongnamdae" } }
+);
+
 window.RANKS = [
   { min: 0, ko: "여행 준비생", en: "Trip Planner" },
   { min: 1, ko: "첫 도장", en: "First Stamp" },
@@ -151,5 +160,5 @@ window.RANKS = [
   { min: 15, ko: "국내 탐험가", en: "Korea Explorer" },
   { min: 30, ko: "K-로드 마스터", en: "K-Road Master" },
   { min: 45, ko: "전국 유랑자", en: "Grand Wanderer" },
-  { min: 59, ko: "대한민국 정복", en: "Korea Conquered" }
+  { min: window.BADGES.length, ko: "대한민국 정복", en: "Korea Conquered" }
 ];

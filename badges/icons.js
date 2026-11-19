@@ -110,6 +110,10 @@ window.ICONS = {
     "....aa....", "...aaaa...", "..aaaaaa..", "..abaaba..", "..aaaaaa..", "..a.aa.a..", ".a..a..a..", "cccccccccc"] },
   waves: { p: { a: "#F2B233", b: "#FFFFFF", c: "#1E5AA8", d: "#6FA8E8" }, m: [
     "......aa..", ".....aaaa.", "......aa..", "..........", ".b...b...b", "bcb.bcb.bc", "cccccccccc", "dddddddddd", ".b...b...b", "dddddddddd"] },
+  greenhouse: { p: { a: "#2F6A4E", b: "#BFE3D0", c: "#7FC28E", d: "#3B82B8" }, m: [
+    "...aaaa...", "..abbbba..", ".abcbbcba.", ".abbbbbba.", "abcbbbbcba", "abbbbbbbba", "aaaaaaaaaa", "dddddddddd"] },
+  palette: { p: { a: "#C9A27A", b: "#E24B4A", c: "#3B82B8", d: "#F2B233", e: "#2F7A4E" }, m: [
+    "..aaaaaa..", ".abaacaaa.", "aaaaaaaada", "aeaa..aaaa", "aaaa..aaaa", "aaaaaaaaa.", ".aaaaaaa..", "..aaaa...."] },
   pagoda: { p: { a: "#7A4A2A", d: "#5E8B3A" }, m: [
     "....aa....", "...aaaa...", "....aa....", "..aaaaaa..", "...aaaa...", ".aaaaaaaa.", "...aaaa...", "aaaaaaaaaa", "..aaaaaa..", "dddddddddd"] }
 };

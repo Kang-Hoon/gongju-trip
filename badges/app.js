@@ -18,6 +18,8 @@
     undo: { en: "Remove badge", ko: "뱃지 취소" },
     todo: { en: "To earn it", ko: "이렇게 하면 획득" },
     planIt: { en: "Plan a trip here →", ko: "여기 여행 일정 짜기 →" },
+    planSoon: { en: "Trip planner for this place is coming soon", ko: "이 지역 여행 플래너는 곧 추가될 예정이에요" },
+    bonus: { en: "BONUS", ko: "보너스" },
     map: { en: "Open map", ko: "지도 보기" },
     earnedOn: { en: "Earned {d}", ko: "{d} 획득" },
     unlocked: { en: "BADGE UNLOCKED", ko: "뱃지 획득" },
@@ -130,7 +132,7 @@
         <div class="grid">${list.map((b) => `
           <button class="badge ${set[b.id] ? "" : "locked"}" data-id="${b.id}" aria-label="${esc(name(b))}">
             <canvas width="16" height="16"></canvas>
-            <span class="bn">${esc(name(b))}</span>
+            <span class="bn">${esc(name(b))}${b.bonus ? ` <span class="bonus pixel">${t("bonus")}</span>` : ""}</span>
             <span class="bt">${set[b.id] ? esc(L(b.t)) : "???"}</span>
           </button>`).join("")}
         </div></section>`;
@@ -158,6 +160,7 @@
       ${has && date ? `<p class="when">✓ ${esc(t("earnedOn", { d: date }))}</p>` : ""}
       <div class="sdo"><b>${t("todo")}</b>${esc(L(b.d))}</div>
       ${viewing ? "" : `<button class="btn ${has ? "ghost" : "ok"}" id="toggle">${has ? t("undo") : "✓ " + t("been")}</button>`}
+      ${b.plan ? "" : `<p class="soon">🛠️ ${t("planSoon")}</p>`}
       <div class="links">
         ${b.plan ? `<a href="../?city=${b.plan}#/setup">${t("planIt")}</a>` : ""}
         <a href="https://www.google.com/maps/search/${mapQ}" target="_blank" rel="noopener">${t("map")} ↗</a>

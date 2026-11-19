@@ -14,7 +14,7 @@ Pick a city → set trip length, start/end time, origin and transport → answer
 - 10-question taste quiz → profile, persona, best-matching cities
 - Remove any stop and the plan re-builds; the URL always reproduces the exact plan
 - City theme voting and a short feedback survey (stored in Supabase)
-- **Korea Badges** at [`/badges/`](https://kang-hoon.github.io/gongju-trip/badges/): 59 pixel badges (Seoul's 10 districts + 49 destinations), ranks, region completion, shareable collection link and badge-card image. Badge art lives in `badges/icons.js` + `badges/render.js`, so the style can be swapped without touching the data.
+- **Korea Badges** at [`/badges/`](https://kang-hoon.github.io/gongju-trip/badges/): 61 pixel badges (Seoul's 10 districts + 49 destinations + 2 bonus planner cities), ranks, region completion, shareable collection link and badge-card image. Badge art lives in `badges/icons.js` + `badges/render.js`, so the style can be swapped without touching the data.
 - Original quiz for Michael is kept at [`/michael/`](https://kang-hoon.github.io/gongju-trip/michael/)
 
 ## Structure
