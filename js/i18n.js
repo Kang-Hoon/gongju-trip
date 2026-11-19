@@ -9,6 +9,7 @@ export const STR = {
     ko: "도시를 고르고, 시간을 정하고, 10개 질문에 답하면 시간대별 일정과 음식 추천이 나와요."
   },
   startPlanning: { en: "Start planning →", ko: "일정 짜기 →" },
+  badgesLink: { en: "🏅 Collect Korea badges", ko: "🏅 전국 여행 뱃지 모으기" },
   notSure: { en: "Not sure where? Take the quiz first", ko: "어디 갈지 모르겠다면 퀴즈부터" },
   cities: { en: "Cities", ko: "도시" },
   communityTheme: { en: "Visitors say:", ko: "방문자들이 꼽은 테마:" },

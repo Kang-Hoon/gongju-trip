@@ -61,6 +61,7 @@ async function renderHome() {
       <div class="row">
         <button class="btn" id="start">${t("startPlanning")}</button>
         <button class="btn ghost" id="quizFirst">${t("notSure")}</button>
+        <a class="btn ghost" href="badges/" style="text-decoration:none">${t("badgesLink")}</a>
       </div>
     </section>
     <h2 class="section-title">${t("cities")}</h2>
