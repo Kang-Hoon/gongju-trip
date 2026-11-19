@@ -12,25 +12,25 @@ window.REGIONS = [
 
 window.BADGES = [
   // ---- Seoul ----
-  { id: "jongno", r: "seoul", ko: "종로구", en: "Jongno", icon: "palace", c: "#7A2E2E",
+  { id: "jongno", r: "seoul", ko: "종로구", en: "Jongno", icon: "palace", c: "#7A2E2E", plan: "seoul",
     t: { ko: "궁궐 산책자", en: "Palace Stroller" }, d: { ko: "경복궁, 북촌한옥마을, 익선동, 광장시장", en: "Gyeongbokgung, Bukchon, Ikseon-dong, Gwangjang Market" } },
-  { id: "junggu", r: "seoul", ko: "중구", en: "Jung-gu", icon: "tower", c: "#1F4E79",
+  { id: "junggu", r: "seoul", ko: "중구", en: "Jung-gu", icon: "tower", c: "#1F4E79", plan: "seoul",
     t: { ko: "남산 정복", en: "Namsan Climber" }, d: { ko: "N서울타워, 명동, 덕수궁 돌담길, DDP", en: "N Seoul Tower, Myeongdong, Deoksugung wall road, DDP" } },
-  { id: "yongsan", r: "seoul", ko: "용산구", en: "Yongsan", icon: "museum", c: "#5B4A8B",
+  { id: "yongsan", r: "seoul", ko: "용산구", en: "Yongsan", icon: "museum", c: "#5B4A8B", plan: "seoul",
     t: { ko: "용산 탐험가", en: "Yongsan Explorer" }, d: { ko: "국립중앙박물관, 이태원·한남동, 해방촌", en: "National Museum of Korea, Itaewon & Hannam, Haebangchon" } },
-  { id: "mapo", r: "seoul", ko: "마포구", en: "Mapo", icon: "guitar", c: "#B8336A",
+  { id: "mapo", r: "seoul", ko: "마포구", en: "Mapo", icon: "guitar", c: "#B8336A", plan: "seoul",
     t: { ko: "홍대 인디", en: "Hongdae Indie" }, d: { ko: "홍대, 연남동 경의선숲길, 망원시장", en: "Hongdae, Yeonnam forest path, Mangwon Market" } },
-  { id: "seongdong", r: "seoul", ko: "성동구", en: "Seongdong", icon: "tree", c: "#2F5D46",
+  { id: "seongdong", r: "seoul", ko: "성동구", en: "Seongdong", icon: "tree", c: "#2F5D46", plan: "seoul",
     t: { ko: "성수 힙스터", en: "Seongsu Hipster" }, d: { ko: "성수 카페거리, 서울숲, 연무장길", en: "Seongsu cafés, Seoul Forest, Yeonmujang-gil" } },
-  { id: "gangnam", r: "seoul", ko: "강남구", en: "Gangnam", icon: "diamond", c: "#1B6F8A",
+  { id: "gangnam", r: "seoul", ko: "강남구", en: "Gangnam", icon: "diamond", c: "#1B6F8A", plan: "seoul",
     t: { ko: "강남 스타일", en: "Gangnam Style" }, d: { ko: "코엑스 별마당도서관, 봉은사, 가로수길", en: "Starfield Library, Bongeunsa, Garosu-gil" } },
-  { id: "songpa", r: "seoul", ko: "송파구", en: "Songpa", icon: "skyscraper", c: "#3D3D3A",
+  { id: "songpa", r: "seoul", ko: "송파구", en: "Songpa", icon: "skyscraper", c: "#3D3D3A", plan: "seoul",
     t: { ko: "잠실 타워", en: "Tower Topper" }, d: { ko: "롯데월드타워 서울스카이, 석촌호수", en: "Lotte World Tower Seoul Sky, Seokchon Lake" } },
-  { id: "yeongdeungpo", r: "seoul", ko: "영등포구", en: "Yeongdeungpo", icon: "bridge", c: "#C26A1E",
+  { id: "yeongdeungpo", r: "seoul", ko: "영등포구", en: "Yeongdeungpo", icon: "bridge", c: "#C26A1E", plan: "seoul",
     t: { ko: "여의도 한강", en: "Han River Chiller" }, d: { ko: "여의도한강공원, 더현대 서울, 63빌딩", en: "Yeouido Hangang Park, The Hyundai Seoul, 63 Building" } },
-  { id: "seodaemun", r: "seoul", ko: "서대문구", en: "Seodaemun", icon: "book", c: "#7B5A2B",
+  { id: "seodaemun", r: "seoul", ko: "서대문구", en: "Seodaemun", icon: "book", c: "#7B5A2B", plan: "seoul",
     t: { ko: "신촌 청춘", en: "Sinchon Student" }, d: { ko: "신촌·이대 거리, 서대문형무소역사관, 안산자락길", en: "Sinchon & Ewha streets, Seodaemun Prison History Hall, Ansan trail" } },
-  { id: "gwangjin", r: "seoul", ko: "광진구", en: "Gwangjin", icon: "sunrise", c: "#A13C2F",
+  { id: "gwangjin", r: "seoul", ko: "광진구", en: "Gwangjin", icon: "sunrise", c: "#A13C2F", plan: "seoul",
     t: { ko: "아차산 일출", en: "Achasan Sunrise" }, d: { ko: "아차산, 뚝섬한강공원, 건대 맛의거리", en: "Achasan, Ttukseom Hangang Park, Konkuk food street" } },
 
   // ---- Capital area ----
@@ -44,7 +44,7 @@ window.BADGES = [
     t: { ko: "DMZ 방문자", en: "DMZ Visitor" }, d: { ko: "임진각, DMZ 투어, 헤이리 예술마을", en: "Imjingak, DMZ tour, Heyri Art Village" } },
 
   // ---- Gangwon ----
-  { id: "gangneung", r: "gangwon", ko: "강릉", en: "Gangneung", icon: "cup", c: "#6B4226",
+  { id: "gangneung", r: "gangwon", ko: "강릉", en: "Gangneung", icon: "cup", c: "#6B4226", plan: "gangneung",
     t: { ko: "바다 커피 한 잔", en: "Coffee by the Sea" }, d: { ko: "안목해변 카페거리, 경포대, 오죽헌", en: "Anmok coffee street, Gyeongpodae, Ojukheon" } },
   { id: "sokcho", r: "gangwon", ko: "속초·설악산", en: "Sokcho & Seoraksan", icon: "snowpeak", c: "#2E3E4E",
     t: { ko: "설악의 정상", en: "Seorak Summit" }, d: { ko: "설악산 케이블카, 울산바위, 중앙시장", en: "Seoraksan cable car, Ulsanbawi, Jungang Market" } },
@@ -102,9 +102,9 @@ window.BADGES = [
     t: { ko: "산수유 마을", en: "Cornus Village" }, d: { ko: "화엄사, 노고단, 산수유마을", en: "Hwaeomsa, Nogodan, cornus blossom village" } },
 
   // ---- Gyeongsang ----
-  { id: "busan", r: "gyeongsang", ko: "부산", en: "Busan", icon: "waves", c: "#1E5AA8",
+  { id: "busan", r: "gyeongsang", ko: "부산", en: "Busan", icon: "waves", c: "#1E5AA8", plan: "busan",
     t: { ko: "바다 사나이", en: "Sea Dog" }, d: { ko: "해운대, 감천문화마을, 자갈치시장, 광안대교", en: "Haeundae, Gamcheon village, Jagalchi Market, Gwangan Bridge" } },
-  { id: "gyeongju", r: "gyeongsang", ko: "경주", en: "Gyeongju", icon: "pagoda", c: "#6E3B1F",
+  { id: "gyeongju", r: "gyeongsang", ko: "경주", en: "Gyeongju", icon: "pagoda", c: "#6E3B1F", plan: "gyeongju",
     t: { ko: "천년 고도", en: "Thousand-Year Capital" }, d: { ko: "불국사, 석굴암, 대릉원, 동궁과 월지", en: "Bulguksa, Seokguram, Daereungwon, Donggung Palace & Wolji" } },
   { id: "andong", r: "gyeongsang", ko: "안동", en: "Andong", icon: "mask", c: "#5A4632",
     t: { ko: "하회탈의 미소", en: "Mask Smile" }, d: { ko: "하회마을, 병산서원, 안동찜닭", en: "Hahoe Village, Byeongsan Seowon, jjimdak" } },
@@ -138,7 +138,7 @@ window.BADGES = [
     t: { ko: "Y자 출렁다리", en: "Bridge Walker" }, d: { ko: "Y자형 출렁다리, 수승대", en: "Y-shaped suspension bridge, Suseungdae" } },
 
   // ---- Islands ----
-  { id: "jeju", r: "island", ko: "제주", en: "Jeju", icon: "volcano", c: "#2E6B5E",
+  { id: "jeju", r: "island", ko: "제주", en: "Jeju", icon: "volcano", c: "#2E6B5E", plan: "jeju",
     t: { ko: "오름 정복", en: "Oreum Conqueror" }, d: { ko: "성산일출봉, 오름, 올레길, 바다", en: "Seongsan Ilchulbong, oreum hills, Olle trails, beaches" } },
   { id: "ulleungdo", r: "island", ko: "울릉도", en: "Ulleungdo", icon: "squid", c: "#2A4A7A",
     t: { ko: "동해의 끝", en: "Edge of the East Sea" }, d: { ko: "해안 절벽, 나리분지, 독도 (날씨 허락 시)", en: "Sea cliffs, Nari Basin, Dokdo (weather permitting)" } }

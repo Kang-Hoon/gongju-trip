@@ -40,7 +40,7 @@ function travelTime(city, a, b, mode) {
   if (!a || !b) return 0;
   if (a === b) return mode === "transit" ? 15 : 10;
   const t = city.areaTime[a + "-" + b] || city.areaTime[b + "-" + a] || 20;
-  return mode === "transit" ? Math.round(t * 1.6 + 5) : t;
+  return mode === "transit" ? Math.round(t * (city.transitFactor || 1.6) + 5) : t;
 }
 
 function durFor(spot, profile) {
@@ -68,6 +68,7 @@ export function buildPlan(opts, profile) {
 
   for (let d = 0; d < opts.days; d++) {
     const weekday = opts.date ? (new Date(opts.date + "T12:00:00").getDay() + d) % 7 : null;
+    const dayDate = opts.date ? new Date(new Date(opts.date + "T12:00:00").getTime() + d * 86400000) : null;
 
     // choose city for the day: stay in main city unless it's running out of good spots
     let city = main;
@@ -102,7 +103,7 @@ export function buildPlan(opts, profile) {
     const goingHome = d === opts.days - 1 && opts.origin !== "local" && opts.origin !== main.id;
     const homeTravel = goingHome ? (city.from[opts.origin] || [0, 0])[modeIdx] : 0;
 
-    let lunch = t > toMin("13:45");
+    let lunch = t > toMin("14:30");
     let dinner = false;
     let guard = 0;
 
@@ -124,6 +125,7 @@ export function buildPlan(opts, profile) {
       const cands = city.spots.filter((s) => {
         if (used.has(s.id)) return false;
         if (weekday !== null && s.closed.includes(weekday)) return false;
+        if (dayDate && closedNth(s, dayDate)) return false;
         const tr = travelTime(city, area, s.area, opts.mode);
         const st = Math.max(t + tr, toMin(s.open));
         const du = durFor(s, profile);
@@ -186,11 +188,19 @@ export function buildPlan(opts, profile) {
   return { days, sunset };
 }
 
+// Monthly closures like "1st Monday of each month": closedNth: [{ wd: 1, n: 1, months: [0..11] (optional) }]
+function closedNth(spot, date) {
+  if (!spot.closedNth) return false;
+  const n = Math.ceil(date.getDate() / 7);
+  return spot.closedNth.some((r) => r.wd === date.getDay() && r.n === n && (!r.months || r.months.includes(date.getMonth())));
+}
+
 // Approximate minutes between cities: [car, public transport]
 const CITY_LINKS = {
   "gongju-buyeo": [40, 60],
   "gongju-sejong": [30, 45],
-  "sejong-cheongju": [35, 50]
+  "sejong-cheongju": [35, 50],
+  "busan-gyeongju": [60, 70]
 };
 function cityTravel(a, b) {
   if (a === "daejeon") return cityById(b).from.daejeon;

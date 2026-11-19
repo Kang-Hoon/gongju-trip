@@ -5,7 +5,7 @@ import { getLang, L, setLang, t } from "./i18n.js";
 import { myVote, online, submitSurvey, voteCounts, voteTheme } from "./store.js";
 
 // ---------------- State ----------------
-const DEFAULTS = { name: "", cityId: "auto", days: 1, date: "", start: "10:00", end: "19:00", origin: "daejeon", mode: "car" };
+const DEFAULTS = { name: "", cityId: "auto", days: 1, date: "", start: "10:00", end: "19:00", origin: "seoul", mode: "transit" };
 const state = {
   settings: { ...DEFAULTS },
   answers: new Array(QUESTIONS.length).fill(null),
@@ -269,8 +269,8 @@ function decodePlan(q) {
   const s = {
     cityId, days,
     start: valid(q.get("s"), "10:00"), end: valid(q.get("e"), "19:00"),
-    origin: ORIGINS[q.get("o")] ? q.get("o") : "daejeon",
-    mode: q.get("m") === "transit" ? "transit" : "car",
+    origin: ORIGINS[q.get("o")] ? q.get("o") : "seoul",
+    mode: q.get("m") === "car" ? "car" : "transit",
     date: /^\d{4}-\d{2}-\d{2}$/.test(q.get("dt") || "") ? q.get("dt") : "",
     name: (q.get("for") || "").slice(0, 30)
   };

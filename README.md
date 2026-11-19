@@ -7,10 +7,11 @@ Taste-based trip planner for cities around Daejeon, Korea. English & 한국어.
 Pick a city → set trip length, start/end time, origin and transport → answer 10 quick questions → get an hour-by-hour plan with meals, closing-day checks and a shareable link.
 
 ## Features
-- 6 cities: Gongju, Buyeo, Daejeon, Sejong, Cheongju, Jeonju
+- 11 cities: Seoul, Busan, Gyeongju, Jeju, Gangneung (`js/cities2.js`) + Gongju, Buyeo, Daejeon, Sejong, Cheongju, Jeonju (`js/data.js`)
 - Day trip, 1 night 2 days, 2 nights 3 days (long stays add a nearby city as a day trip)
 - Start / end time per day, optional date (Monday closures are skipped automatically)
-- Car or public transport, coming from Seoul / Daejeon / already in the city
+- Public transport (default) or car, coming from Seoul / Incheon Airport / Daejeon / already in the city
+- Monthly closures (e.g. 1st Monday) via `closedNth`
 - 10-question taste quiz → profile, persona, best-matching cities
 - Remove any stop and the plan re-builds; the URL always reproduces the exact plan
 - City theme voting and a short feedback survey (stored in Supabase)

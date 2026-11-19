@@ -5,6 +5,8 @@
 // area: spots in the same area are ~10 min apart; other areas use the city's travel matrix
 // best: "sunset" | "night" | "morning" — time-of-day bonus in the planner
 
+import { CITIES2 } from "./cities2.js";
+
 export const DIMS = ["history", "nature", "food", "cafe", "photo", "calm", "active", "art"];
 
 export const DIM_LABELS = {
@@ -22,10 +24,11 @@ export const DIM_LABELS = {
 export const ORIGINS = {
   daejeon: { en: "Daejeon", ko: "대전" },
   seoul:   { en: "Seoul", ko: "서울" },
+  incheon: { en: "Incheon Airport", ko: "인천공항" },
   local:   { en: "Already in the city", ko: "이미 그 도시에 있음" }
 };
 
-export const CITIES = [
+const CITIES1 = [
   {
     id: "gongju",
     name: { en: "Gongju", ko: "공주" },
@@ -34,7 +37,7 @@ export const CITIES = [
       en: "Baekje's second capital: fortress walls, royal tombs and chestnuts.",
       ko: "백제의 두 번째 수도. 성곽길, 왕릉, 그리고 알밤."
     },
-    from: { daejeon: [40, 60], seoul: [120, 110], local: [0, 0] },
+    from: { daejeon: [40, 60], seoul: [120, 110], incheon: [150, 150], local: [0, 0] },
     nearby: ["buyeo", "sejong"],
     areaTime: { "A-B": 10, "A-C": 35, "B-C": 35, "A-D": 15, "B-D": 20, "C-D": 40 },
     themes: [
@@ -88,7 +91,7 @@ export const CITIES = [
       en: "Baekje's last capital: lotus ponds, temple ruins and a riverside fortress.",
       ko: "백제의 마지막 수도. 연못, 절터, 강변 산성."
     },
-    from: { daejeon: [70, 90], seoul: [150, 140], local: [0, 0] },
+    from: { daejeon: [70, 90], seoul: [150, 140], incheon: [170, 170], local: [0, 0] },
     nearby: ["gongju"],
     areaTime: { "A-B": 15 },
     themes: [
@@ -132,7 +135,7 @@ export const CITIES = [
       en: "Science city with a famous bakery, kalguksu, forests and hot springs.",
       ko: "성심당과 칼국수, 휴양림과 온천이 있는 과학도시."
     },
-    from: { daejeon: [0, 0], seoul: [120, 60], local: [0, 0] },
+    from: { daejeon: [0, 0], seoul: [120, 60], incheon: [150, 140], local: [0, 0] },
     nearby: ["gongju", "sejong"],
     areaTime: { "A-B": 20, "A-C": 35, "B-C": 30, "A-D": 25, "B-D": 15, "C-D": 30 },
     themes: [
@@ -188,7 +191,7 @@ export const CITIES = [
       en: "Korea's garden city: a national arboretum, a huge lake park and river bridges.",
       ko: "정원도시 세종. 국립수목원, 호수공원, 금강 보행교."
     },
-    from: { daejeon: [35, 50], seoul: [110, 90], local: [0, 0] },
+    from: { daejeon: [35, 50], seoul: [110, 90], incheon: [140, 150], local: [0, 0] },
     nearby: ["daejeon", "gongju"],
     areaTime: { "A-B": 25 },
     themes: [
@@ -235,7 +238,7 @@ export const CITIES = [
       en: "Art storage museum, a hilltop mural village and a former presidential retreat.",
       ko: "수장형 미술관, 벽화마을, 대통령 별장 청남대."
     },
-    from: { daejeon: [45, 60], seoul: [100, 100], local: [0, 0] },
+    from: { daejeon: [45, 60], seoul: [100, 100], incheon: [120, 130], local: [0, 0] },
     nearby: ["sejong", "daejeon"],
     areaTime: { "A-B": 20, "A-C": 45, "B-C": 50, "A-D": 20, "B-D": 30, "C-D": 55 },
     themes: [
@@ -285,7 +288,7 @@ export const CITIES = [
       en: "800 hanok houses, bibimbap's hometown and a Joseon royal shrine.",
       ko: "한옥 800채, 비빔밥의 고향, 조선 왕실 사당 경기전."
     },
-    from: { daejeon: [80, 100], seoul: [160, 120], local: [0, 0] },
+    from: { daejeon: [80, 100], seoul: [160, 120], incheon: [190, 180], local: [0, 0] },
     nearby: [],
     areaTime: { "A-B": 15 },
     themes: [
@@ -338,6 +341,8 @@ export const CITIES = [
     }
   }
 ];
+
+export const CITIES = [...CITIES1, ...CITIES2];
 
 // Approximate sunset (HH:MM) for central Korea by month index 0-11
 export const SUNSET = ["17:40", "18:10", "18:40", "19:05", "19:30", "19:55", "19:55", "19:30", "18:50", "18:10", "17:30", "17:20"];

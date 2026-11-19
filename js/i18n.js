@@ -2,7 +2,7 @@ import { local } from "./store.js";
 
 export const STR = {
   brand: { en: "K-Trip Planner", ko: "K-트립 플래너" },
-  heroEyebrow: { en: "Day trips & short stays around Daejeon", ko: "대전 근교 당일치기 · 짧은 여행" },
+  heroEyebrow: { en: "Korea trips built around your taste", ko: "내 취향에 맞춘 국내 여행" },
   heroTitle: { en: "Plan a Korean trip that fits <em>your</em> taste.", ko: "<em>내 취향</em>에 맞는 국내 여행 일정 짜기" },
   heroSub: {
     en: "Pick a city, set your times, answer 10 quick questions. Get an hour-by-hour plan with food picks.",
