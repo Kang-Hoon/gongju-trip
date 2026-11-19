@@ -1,0 +1,1663 @@
+{
+ "version": 1,
+ "updated": "2026-11-19",
+ "dims": [
+  "history",
+  "nature",
+  "food",
+  "cafe",
+  "photo",
+  "calm",
+  "active",
+  "art",
+  "sea"
+ ],
+ "places": [
+  {
+   "id": "seoul",
+   "region": "seoul",
+   "scores": {
+    "history": 3,
+    "nature": 1,
+    "food": 3,
+    "cafe": 3,
+    "photo": 3,
+    "calm": 1,
+    "active": 2,
+    "art": 3,
+    "sea": 0
+   },
+   "hours_from_seoul": 0,
+   "days": 3,
+   "seasons": [
+    "sp",
+    "su",
+    "au",
+    "wi"
+   ],
+   "crowd": 3,
+   "easy": 3,
+   "access": "subway",
+   "plan": "seoul",
+   "why": {
+    "en": "Palaces, markets, cafés and the Han River — the easiest place to start.",
+    "ko": "궁궐, 시장, 카페, 한강까지. 처음 한국 여행을 시작하기 가장 쉬운 곳."
+   }
+  },
+  {
+   "id": "incheon",
+   "region": "capital",
+   "scores": {
+    "history": 2,
+    "nature": 1,
+    "food": 2,
+    "cafe": 1,
+    "photo": 2,
+    "calm": 1,
+    "active": 1,
+    "art": 1,
+    "sea": 2
+   },
+   "hours_from_seoul": 1,
+   "days": 1,
+   "seasons": [
+    "sp",
+    "su",
+    "au",
+    "wi"
+   ],
+   "crowd": 2,
+   "easy": 3,
+   "access": "subway",
+   "plan": null,
+   "why": {
+    "en": "Chinatown, open-port streets and sea views right by the airport.",
+    "ko": "공항 바로 옆에서 차이나타운, 개항장 거리, 바다를 볼 수 있어요."
+   }
+  },
+  {
+   "id": "suwon",
+   "region": "capital",
+   "scores": {
+    "history": 3,
+    "nature": 1,
+    "food": 2,
+    "cafe": 2,
+    "photo": 2,
+    "calm": 1,
+    "active": 2,
+    "art": 1,
+    "sea": 0
+   },
+   "hours_from_seoul": 1,
+   "days": 1,
+   "seasons": [
+    "sp",
+    "au"
+   ],
+   "crowd": 2,
+   "easy": 3,
+   "access": "subway",
+   "plan": null,
+   "why": {
+    "en": "Walk a UNESCO fortress wall, then eat Suwon's famous fried chicken.",
+    "ko": "유네스코 세계유산 성곽을 걷고 수원 통닭으로 마무리."
+   }
+  },
+  {
+   "id": "ganghwa",
+   "region": "capital",
+   "scores": {
+    "history": 3,
+    "nature": 2,
+    "food": 1,
+    "cafe": 1,
+    "photo": 2,
+    "calm": 3,
+    "active": 1,
+    "art": 0,
+    "sea": 2
+   },
+   "hours_from_seoul": 2,
+   "days": 1,
+   "seasons": [
+    "sp",
+    "au"
+   ],
+   "crowd": 1,
+   "easy": 1,
+   "access": "bus",
+   "plan": null,
+   "why": {
+    "en": "Prehistoric dolmens, an old temple and tidal-flat sunsets.",
+    "ko": "고인돌, 오래된 사찰, 갯벌 노을."
+   }
+  },
+  {
+   "id": "paju",
+   "region": "capital",
+   "scores": {
+    "history": 3,
+    "nature": 1,
+    "food": 1,
+    "cafe": 1,
+    "photo": 1,
+    "calm": 2,
+    "active": 1,
+    "art": 2,
+    "sea": 0
+   },
+   "hours_from_seoul": 1.5,
+   "days": 1,
+   "seasons": [
+    "sp",
+    "au",
+    "wi"
+   ],
+   "crowd": 2,
+   "easy": 2,
+   "access": "tour/bus",
+   "plan": null,
+   "why": {
+    "en": "See the DMZ and the divided peninsula up close.",
+    "ko": "DMZ와 분단의 현장을 가까이에서."
+   }
+  },
+  {
+   "id": "gangneung",
+   "region": "gangwon",
+   "scores": {
+    "history": 2,
+    "nature": 2,
+    "food": 2,
+    "cafe": 3,
+    "photo": 2,
+    "calm": 2,
+    "active": 1,
+    "art": 1,
+    "sea": 3
+   },
+   "hours_from_seoul": 2,
+   "days": 2,
+   "seasons": [
+    "sp",
+    "su",
+    "au",
+    "wi"
+   ],
+   "crowd": 2,
+   "easy": 2,
+   "access": "KTX",
+   "plan": "gangneung",
+   "why": {
+    "en": "Coffee with a sea view, Joseon heritage and soft tofu.",
+    "ko": "바다 보며 커피 한 잔, 조선 유산, 초당순두부."
+   }
+  },
+  {
+   "id": "sokcho",
+   "region": "gangwon",
+   "scores": {
+    "history": 0,
+    "nature": 3,
+    "food": 2,
+    "cafe": 1,
+    "photo": 3,
+    "calm": 1,
+    "active": 3,
+    "art": 0,
+    "sea": 3
+   },
+   "hours_from_seoul": 2.5,
+   "days": 2,
+   "seasons": [
+    "au",
+    "wi"
+   ],
+   "crowd": 2,
+   "easy": 2,
+   "access": "bus",
+   "plan": null,
+   "why": {
+    "en": "Seoraksan's peaks meet the East Sea — Korea's best autumn colours.",
+    "ko": "설악산 봉우리와 동해 바다. 가을 단풍은 국내 최고."
+   }
+  },
+  {
+   "id": "chuncheon",
+   "region": "gangwon",
+   "scores": {
+    "history": 1,
+    "nature": 2,
+    "food": 2,
+    "cafe": 1,
+    "photo": 2,
+    "calm": 2,
+    "active": 1,
+    "art": 1,
+    "sea": 0
+   },
+   "hours_from_seoul": 1.5,
+   "days": 1,
+   "seasons": [
+    "sp",
+    "au"
+   ],
+   "crowd": 2,
+   "easy": 2,
+   "access": "ITX",
+   "plan": null,
+   "why": {
+    "en": "Lake views, Nami Island and spicy dakgalbi, an easy hop from Seoul.",
+    "ko": "호수, 남이섬, 닭갈비. 서울에서 가볍게 다녀오기 좋아요."
+   }
+  },
+  {
+   "id": "pyeongchang",
+   "region": "gangwon",
+   "scores": {
+    "history": 1,
+    "nature": 3,
+    "food": 1,
+    "cafe": 1,
+    "photo": 2,
+    "calm": 2,
+    "active": 2,
+    "art": 0,
+    "sea": 0
+   },
+   "hours_from_seoul": 2.5,
+   "days": 2,
+   "seasons": [
+    "su",
+    "wi"
+   ],
+   "crowd": 1,
+   "easy": 1,
+   "access": "KTX+bus",
+   "plan": null,
+   "why": {
+    "en": "Mountain sheep farms in summer, Olympic ski slopes in winter.",
+    "ko": "여름엔 대관령 양떼목장, 겨울엔 올림픽 스키장."
+   }
+  },
+  {
+   "id": "yeongwol",
+   "region": "gangwon",
+   "scores": {
+    "history": 2,
+    "nature": 3,
+    "food": 1,
+    "cafe": 0,
+    "photo": 2,
+    "calm": 3,
+    "active": 1,
+    "art": 1,
+    "sea": 0
+   },
+   "hours_from_seoul": 3,
+   "days": 1,
+   "seasons": [
+    "au"
+   ],
+   "crowd": 1,
+   "easy": 1,
+   "access": "bus",
+   "plan": null,
+   "why": {
+    "en": "River bends, a king's exile site and some of Korea's darkest night skies.",
+    "ko": "강이 굽이치는 풍경, 단종의 유배지, 별이 쏟아지는 밤하늘."
+   }
+  },
+  {
+   "id": "yangyang",
+   "region": "gangwon",
+   "scores": {
+    "history": 1,
+    "nature": 2,
+    "food": 1,
+    "cafe": 2,
+    "photo": 2,
+    "calm": 1,
+    "active": 3,
+    "art": 0,
+    "sea": 3
+   },
+   "hours_from_seoul": 2.5,
+   "days": 2,
+   "seasons": [
+    "su"
+   ],
+   "crowd": 2,
+   "easy": 1,
+   "access": "bus",
+   "plan": null,
+   "why": {
+    "en": "Korea's surf town, with a cliffside temple for sunrise.",
+    "ko": "서핑 성지, 그리고 절벽 위 낙산사 일출."
+   }
+  },
+  {
+   "id": "samcheok",
+   "region": "gangwon",
+   "scores": {
+    "history": 0,
+    "nature": 3,
+    "food": 1,
+    "cafe": 0,
+    "photo": 2,
+    "calm": 2,
+    "active": 2,
+    "art": 0,
+    "sea": 3
+   },
+   "hours_from_seoul": 3.5,
+   "days": 2,
+   "seasons": [
+    "su"
+   ],
+   "crowd": 1,
+   "easy": 1,
+   "access": "bus",
+   "plan": null,
+   "why": {
+    "en": "Sea cable car, an ocean suspension bridge and a giant limestone cave.",
+    "ko": "해상케이블카, 바다 출렁다리, 거대한 석회동굴."
+   }
+  },
+  {
+   "id": "inje",
+   "region": "gangwon",
+   "scores": {
+    "history": 0,
+    "nature": 3,
+    "food": 0,
+    "cafe": 0,
+    "photo": 2,
+    "calm": 3,
+    "active": 2,
+    "art": 0,
+    "sea": 0
+   },
+   "hours_from_seoul": 3,
+   "days": 1,
+   "seasons": [
+    "wi",
+    "au"
+   ],
+   "crowd": 1,
+   "easy": 1,
+   "access": "bus",
+   "plan": null,
+   "why": {
+    "en": "A silent white birch forest that looks like Scandinavia in winter.",
+    "ko": "겨울이면 북유럽 같아지는 하얀 자작나무 숲."
+   }
+  },
+  {
+   "id": "danyang",
+   "region": "chungcheong",
+   "scores": {
+    "history": 1,
+    "nature": 3,
+    "food": 1,
+    "cafe": 1,
+    "photo": 3,
+    "calm": 1,
+    "active": 3,
+    "art": 0,
+    "sea": 0
+   },
+   "hours_from_seoul": 2.5,
+   "days": 2,
+   "seasons": [
+    "sp",
+    "au"
+   ],
+   "crowd": 2,
+   "easy": 1,
+   "access": "train",
+   "plan": null,
+   "why": {
+    "en": "River rocks, skywalks and paragliding over the Namhan River.",
+    "ko": "강 위의 바위, 스카이워크, 남한강 위 패러글라이딩."
+   }
+  },
+  {
+   "id": "gongjubuyeo",
+   "region": "chungcheong",
+   "scores": {
+    "history": 3,
+    "nature": 1,
+    "food": 1,
+    "cafe": 1,
+    "photo": 2,
+    "calm": 3,
+    "active": 1,
+    "art": 1,
+    "sea": 0
+   },
+   "hours_from_seoul": 2,
+   "days": 2,
+   "seasons": [
+    "au",
+    "sp"
+   ],
+   "crowd": 1,
+   "easy": 2,
+   "access": "bus",
+   "plan": "gongju",
+   "why": {
+    "en": "Two quiet capitals of the Baekje Kingdom, with fortress walls and lotus ponds.",
+    "ko": "백제의 조용한 두 수도. 성곽길과 연못."
+   }
+  },
+  {
+   "id": "taean",
+   "region": "chungcheong",
+   "scores": {
+    "history": 0,
+    "nature": 3,
+    "food": 1,
+    "cafe": 1,
+    "photo": 2,
+    "calm": 2,
+    "active": 1,
+    "art": 0,
+    "sea": 3
+   },
+   "hours_from_seoul": 3,
+   "days": 2,
+   "seasons": [
+    "su",
+    "au"
+   ],
+   "crowd": 1,
+   "easy": 1,
+   "access": "bus",
+   "plan": null,
+   "why": {
+    "en": "West Sea sunsets, pine-lined beaches and a famous arboretum.",
+    "ko": "서해 노을, 소나무 해변, 천리포수목원."
+   }
+  },
+  {
+   "id": "boryeong",
+   "region": "chungcheong",
+   "scores": {
+    "history": 0,
+    "nature": 2,
+    "food": 2,
+    "cafe": 0,
+    "photo": 1,
+    "calm": 1,
+    "active": 1,
+    "art": 0,
+    "sea": 3
+   },
+   "hours_from_seoul": 2.5,
+   "days": 1,
+   "seasons": [
+    "su"
+   ],
+   "crowd": 2,
+   "easy": 1,
+   "access": "train",
+   "plan": null,
+   "why": {
+    "en": "Big beach, a summer mud festival and grilled clams.",
+    "ko": "넓은 해변, 여름 머드축제, 조개구이."
+   }
+  },
+  {
+   "id": "daejeon",
+   "region": "chungcheong",
+   "scores": {
+    "history": 1,
+    "nature": 2,
+    "food": 3,
+    "cafe": 2,
+    "photo": 1,
+    "calm": 2,
+    "active": 1,
+    "art": 2,
+    "sea": 0
+   },
+   "hours_from_seoul": 1,
+   "days": 1,
+   "seasons": [
+    "sp",
+    "su",
+    "au",
+    "wi"
+   ],
+   "crowd": 2,
+   "easy": 2,
+   "access": "KTX",
+   "plan": "daejeon",
+   "why": {
+    "en": "Bakery pilgrimages, a metasequoia forest and free hot-spring footbaths.",
+    "ko": "빵지순례, 메타세쿼이아 숲, 무료 온천 족욕."
+   }
+  },
+  {
+   "id": "jecheon",
+   "region": "chungcheong",
+   "scores": {
+    "history": 0,
+    "nature": 3,
+    "food": 1,
+    "cafe": 1,
+    "photo": 2,
+    "calm": 2,
+    "active": 2,
+    "art": 0,
+    "sea": 0
+   },
+   "hours_from_seoul": 2.5,
+   "days": 1,
+   "seasons": [
+    "au"
+   ],
+   "crowd": 1,
+   "easy": 1,
+   "access": "train",
+   "plan": null,
+   "why": {
+    "en": "Lake cable car and cliffs over Cheongpung Lake.",
+    "ko": "청풍호 케이블카와 호수 위 절벽."
+   }
+  },
+  {
+   "id": "sejong",
+   "region": "chungcheong",
+   "scores": {
+    "history": 0,
+    "nature": 2,
+    "food": 0,
+    "cafe": 1,
+    "photo": 1,
+    "calm": 2,
+    "active": 1,
+    "art": 1,
+    "sea": 0
+   },
+   "hours_from_seoul": 1.5,
+   "days": 1,
+   "seasons": [
+    "sp",
+    "au"
+   ],
+   "crowd": 1,
+   "easy": 2,
+   "access": "KTX+bus",
+   "plan": "sejong",
+   "why": {
+    "en": "A new garden city with a national arboretum and a huge lake park.",
+    "ko": "국립수목원과 대형 호수공원이 있는 정원도시."
+   }
+  },
+  {
+   "id": "cheongju",
+   "region": "chungcheong",
+   "scores": {
+    "history": 2,
+    "nature": 2,
+    "food": 1,
+    "cafe": 1,
+    "photo": 2,
+    "calm": 1,
+    "active": 2,
+    "art": 3,
+    "sea": 0
+   },
+   "hours_from_seoul": 1.5,
+   "days": 1,
+   "seasons": [
+    "au",
+    "sp"
+   ],
+   "crowd": 1,
+   "easy": 2,
+   "access": "bus",
+   "plan": "cheongju",
+   "why": {
+    "en": "An art-storage museum, mural village and a presidential retreat on a lake.",
+    "ko": "수장형 미술관, 벽화마을, 호숫가 대통령 별장."
+   }
+  },
+  {
+   "id": "jeonju",
+   "region": "jeolla",
+   "scores": {
+    "history": 3,
+    "nature": 0,
+    "food": 3,
+    "cafe": 2,
+    "photo": 3,
+    "calm": 1,
+    "active": 1,
+    "art": 1,
+    "sea": 0
+   },
+   "hours_from_seoul": 2,
+   "days": 2,
+   "seasons": [
+    "sp",
+    "au"
+   ],
+   "crowd": 3,
+   "easy": 3,
+   "access": "KTX",
+   "plan": "jeonju",
+   "why": {
+    "en": "800 hanok houses and Korea's best food city — bibimbap was born here.",
+    "ko": "한옥 800채와 국내 최고의 맛 도시. 비빔밥의 고향."
+   }
+  },
+  {
+   "id": "yeosu",
+   "region": "jeolla",
+   "scores": {
+    "history": 1,
+    "nature": 2,
+    "food": 3,
+    "cafe": 1,
+    "photo": 3,
+    "calm": 1,
+    "active": 1,
+    "art": 0,
+    "sea": 3
+   },
+   "hours_from_seoul": 3,
+   "days": 2,
+   "seasons": [
+    "sp",
+    "su"
+   ],
+   "crowd": 2,
+   "easy": 2,
+   "access": "KTX",
+   "plan": null,
+   "why": {
+    "en": "Romantic night sea, a sea cable car and crab-marinated rice.",
+    "ko": "낭만의 밤바다, 해상케이블카, 게장백반."
+   }
+  },
+  {
+   "id": "suncheon",
+   "region": "jeolla",
+   "scores": {
+    "history": 1,
+    "nature": 3,
+    "food": 1,
+    "cafe": 1,
+    "photo": 2,
+    "calm": 3,
+    "active": 1,
+    "art": 0,
+    "sea": 1
+   },
+   "hours_from_seoul": 2.5,
+   "days": 1,
+   "seasons": [
+    "au"
+   ],
+   "crowd": 2,
+   "easy": 2,
+   "access": "KTX",
+   "plan": null,
+   "why": {
+    "en": "Golden reed fields at sunset and Korea's national garden.",
+    "ko": "노을 지는 갈대밭과 국가정원."
+   }
+  },
+  {
+   "id": "damyang",
+   "region": "jeolla",
+   "scores": {
+    "history": 0,
+    "nature": 3,
+    "food": 2,
+    "cafe": 1,
+    "photo": 2,
+    "calm": 2,
+    "active": 1,
+    "art": 0,
+    "sea": 0
+   },
+   "hours_from_seoul": 3,
+   "days": 1,
+   "seasons": [
+    "su",
+    "au"
+   ],
+   "crowd": 2,
+   "easy": 1,
+   "access": "bus",
+   "plan": null,
+   "why": {
+    "en": "Bamboo forest walks and grilled tteokgalbi.",
+    "ko": "대나무 숲길과 떡갈비."
+   }
+  },
+  {
+   "id": "mokpo",
+   "region": "jeolla",
+   "scores": {
+    "history": 2,
+    "nature": 1,
+    "food": 3,
+    "cafe": 0,
+    "photo": 2,
+    "calm": 1,
+    "active": 1,
+    "art": 0,
+    "sea": 2
+   },
+   "hours_from_seoul": 2.5,
+   "days": 2,
+   "seasons": [
+    "sp",
+    "au"
+   ],
+   "crowd": 1,
+   "easy": 1,
+   "access": "KTX",
+   "plan": null,
+   "why": {
+    "en": "Port city of colonial-era streets and the richest Namdo cooking.",
+    "ko": "근대 거리가 남은 항구, 남도 음식의 본고장."
+   }
+  },
+  {
+   "id": "gunsan",
+   "region": "jeolla",
+   "scores": {
+    "history": 3,
+    "nature": 0,
+    "food": 2,
+    "cafe": 2,
+    "photo": 2,
+    "calm": 2,
+    "active": 1,
+    "art": 1,
+    "sea": 1
+   },
+   "hours_from_seoul": 2.5,
+   "days": 1,
+   "seasons": [
+    "sp",
+    "au",
+    "wi"
+   ],
+   "crowd": 1,
+   "easy": 1,
+   "access": "bus",
+   "plan": null,
+   "why": {
+    "en": "A retro town frozen in the 1930s, with Korea's oldest bakery.",
+    "ko": "1930년대에 멈춘 듯한 레트로 거리와 오래된 빵집."
+   }
+  },
+  {
+   "id": "boseong",
+   "region": "jeolla",
+   "scores": {
+    "history": 0,
+    "nature": 3,
+    "food": 1,
+    "cafe": 1,
+    "photo": 3,
+    "calm": 3,
+    "active": 1,
+    "art": 0,
+    "sea": 1
+   },
+   "hours_from_seoul": 4,
+   "days": 1,
+   "seasons": [
+    "sp",
+    "su"
+   ],
+   "crowd": 1,
+   "easy": 1,
+   "access": "bus",
+   "plan": null,
+   "why": {
+    "en": "Rolling green tea terraces.",
+    "ko": "굽이치는 초록 녹차밭."
+   }
+  },
+  {
+   "id": "cheongsando",
+   "region": "jeolla",
+   "scores": {
+    "history": 0,
+    "nature": 3,
+    "food": 1,
+    "cafe": 0,
+    "photo": 2,
+    "calm": 3,
+    "active": 2,
+    "art": 0,
+    "sea": 2
+   },
+   "hours_from_seoul": 5.5,
+   "days": 2,
+   "seasons": [
+    "sp"
+   ],
+   "crowd": 1,
+   "easy": 1,
+   "access": "bus+ferry",
+   "plan": null,
+   "why": {
+    "en": "A slow-city island of canola fields and stone-wall roads.",
+    "ko": "유채꽃과 돌담길의 슬로시티 섬."
+   }
+  },
+  {
+   "id": "buan",
+   "region": "jeolla",
+   "scores": {
+    "history": 1,
+    "nature": 3,
+    "food": 1,
+    "cafe": 0,
+    "photo": 2,
+    "calm": 2,
+    "active": 1,
+    "art": 0,
+    "sea": 3
+   },
+   "hours_from_seoul": 3.5,
+   "days": 1,
+   "seasons": [
+    "au"
+   ],
+   "crowd": 1,
+   "easy": 1,
+   "access": "bus",
+   "plan": null,
+   "why": {
+    "en": "Layered sea cliffs and a fir-lined temple path.",
+    "ko": "켜켜이 쌓인 해안 절벽과 전나무 숲길."
+   }
+  },
+  {
+   "id": "gochang",
+   "region": "jeolla",
+   "scores": {
+    "history": 2,
+    "nature": 2,
+    "food": 2,
+    "cafe": 0,
+    "photo": 2,
+    "calm": 2,
+    "active": 1,
+    "art": 0,
+    "sea": 0
+   },
+   "hours_from_seoul": 3,
+   "days": 1,
+   "seasons": [
+    "au"
+   ],
+   "crowd": 1,
+   "easy": 1,
+   "access": "bus",
+   "plan": null,
+   "why": {
+    "en": "UNESCO dolmens and red spider lilies at Seonunsa in early autumn.",
+    "ko": "유네스코 고인돌과 초가을 선운사 꽃무릇."
+   }
+  },
+  {
+   "id": "namwon",
+   "region": "jeolla",
+   "scores": {
+    "history": 2,
+    "nature": 2,
+    "food": 2,
+    "cafe": 0,
+    "photo": 1,
+    "calm": 2,
+    "active": 1,
+    "art": 0,
+    "sea": 0
+   },
+   "hours_from_seoul": 2.5,
+   "days": 1,
+   "seasons": [
+    "sp",
+    "au"
+   ],
+   "crowd": 1,
+   "easy": 1,
+   "access": "KTX",
+   "plan": null,
+   "why": {
+    "en": "The garden of Korea's most famous love story, at the foot of Jirisan.",
+    "ko": "춘향전의 무대, 지리산 자락의 정원."
+   }
+  },
+  {
+   "id": "gurye",
+   "region": "jeolla",
+   "scores": {
+    "history": 1,
+    "nature": 3,
+    "food": 1,
+    "cafe": 0,
+    "photo": 2,
+    "calm": 3,
+    "active": 2,
+    "art": 0,
+    "sea": 0
+   },
+   "hours_from_seoul": 3.5,
+   "days": 2,
+   "seasons": [
+    "sp",
+    "au"
+   ],
+   "crowd": 1,
+   "easy": 1,
+   "access": "train",
+   "plan": null,
+   "why": {
+    "en": "Jirisan temples and a village that turns yellow with cornus blossoms.",
+    "ko": "지리산 사찰과 산수유로 노랗게 물드는 마을."
+   }
+  },
+  {
+   "id": "busan",
+   "region": "gyeongsang",
+   "scores": {
+    "history": 1,
+    "nature": 2,
+    "food": 3,
+    "cafe": 2,
+    "photo": 3,
+    "calm": 1,
+    "active": 2,
+    "art": 2,
+    "sea": 3
+   },
+   "hours_from_seoul": 2.5,
+   "days": 3,
+   "seasons": [
+    "sp",
+    "su",
+    "au",
+    "wi"
+   ],
+   "crowd": 3,
+   "easy": 3,
+   "access": "KTX",
+   "plan": "busan",
+   "why": {
+    "en": "Beaches, hillside villages, seafood markets and glittering bridges.",
+    "ko": "해변, 산동네, 수산시장, 반짝이는 다리."
+   }
+  },
+  {
+   "id": "gyeongju",
+   "region": "gyeongsang",
+   "scores": {
+    "history": 3,
+    "nature": 2,
+    "food": 2,
+    "cafe": 2,
+    "photo": 3,
+    "calm": 2,
+    "active": 2,
+    "art": 1,
+    "sea": 0
+   },
+   "hours_from_seoul": 2.5,
+   "days": 2,
+   "seasons": [
+    "sp",
+    "au"
+   ],
+   "crowd": 3,
+   "easy": 3,
+   "access": "KTX",
+   "plan": "gyeongju",
+   "why": {
+    "en": "Silla's thousand-year capital — tombs, temples and glowing ponds at night.",
+    "ko": "신라 천년의 수도. 왕릉, 사찰, 밤의 연못."
+   }
+  },
+  {
+   "id": "andong",
+   "region": "gyeongsang",
+   "scores": {
+    "history": 3,
+    "nature": 1,
+    "food": 2,
+    "cafe": 0,
+    "photo": 2,
+    "calm": 3,
+    "active": 1,
+    "art": 1,
+    "sea": 0
+   },
+   "hours_from_seoul": 3,
+   "days": 2,
+   "seasons": [
+    "au"
+   ],
+   "crowd": 2,
+   "easy": 2,
+   "access": "KTX",
+   "plan": null,
+   "why": {
+    "en": "Korea's best-preserved traditional village and Confucian academies.",
+    "ko": "가장 잘 보존된 전통 마을과 서원."
+   }
+  },
+  {
+   "id": "tongyeong",
+   "region": "gyeongsang",
+   "scores": {
+    "history": 1,
+    "nature": 2,
+    "food": 3,
+    "cafe": 1,
+    "photo": 3,
+    "calm": 1,
+    "active": 1,
+    "art": 2,
+    "sea": 3
+   },
+   "hours_from_seoul": 4,
+   "days": 2,
+   "seasons": [
+    "sp",
+    "au"
+   ],
+   "crowd": 2,
+   "easy": 1,
+   "access": "bus",
+   "plan": null,
+   "why": {
+    "en": "Island-dotted harbour, mural village and fresh oysters.",
+    "ko": "섬이 흩어진 항구, 벽화마을, 싱싱한 굴."
+   }
+  },
+  {
+   "id": "namhae",
+   "region": "gyeongsang",
+   "scores": {
+    "history": 0,
+    "nature": 3,
+    "food": 1,
+    "cafe": 1,
+    "photo": 3,
+    "calm": 3,
+    "active": 1,
+    "art": 0,
+    "sea": 3
+   },
+   "hours_from_seoul": 4.5,
+   "days": 2,
+   "seasons": [
+    "sp"
+   ],
+   "crowd": 1,
+   "easy": 1,
+   "access": "bus",
+   "plan": null,
+   "why": {
+    "en": "Terraced rice paddies falling into the sea.",
+    "ko": "바다로 떨어지는 다랭이 논."
+   }
+  },
+  {
+   "id": "geoje",
+   "region": "gyeongsang",
+   "scores": {
+    "history": 0,
+    "nature": 2,
+    "food": 1,
+    "cafe": 1,
+    "photo": 3,
+    "calm": 1,
+    "active": 1,
+    "art": 0,
+    "sea": 3
+   },
+   "hours_from_seoul": 4.5,
+   "days": 2,
+   "seasons": [
+    "sp",
+    "su"
+   ],
+   "crowd": 2,
+   "easy": 1,
+   "access": "bus",
+   "plan": null,
+   "why": {
+    "en": "Windy-hill windmill and a botanical island garden.",
+    "ko": "바람의 언덕 풍차와 섬 정원 외도."
+   }
+  },
+  {
+   "id": "daegu",
+   "region": "gyeongsang",
+   "scores": {
+    "history": 2,
+    "nature": 1,
+    "food": 3,
+    "cafe": 2,
+    "photo": 1,
+    "calm": 1,
+    "active": 1,
+    "art": 1,
+    "sea": 0
+   },
+   "hours_from_seoul": 2,
+   "days": 1,
+   "seasons": [
+    "sp",
+    "au"
+   ],
+   "crowd": 2,
+   "easy": 2,
+   "access": "KTX",
+   "plan": null,
+   "why": {
+    "en": "Modern-history alleys and night markets in Korea's food-and-fashion city.",
+    "ko": "근대골목과 야시장. 음식과 패션의 도시."
+   }
+  },
+  {
+   "id": "jinju",
+   "region": "gyeongsang",
+   "scores": {
+    "history": 3,
+    "nature": 1,
+    "food": 2,
+    "cafe": 0,
+    "photo": 2,
+    "calm": 2,
+    "active": 1,
+    "art": 0,
+    "sea": 0
+   },
+   "hours_from_seoul": 3.5,
+   "days": 1,
+   "seasons": [
+    "au"
+   ],
+   "crowd": 1,
+   "easy": 1,
+   "access": "bus",
+   "plan": null,
+   "why": {
+    "en": "Riverside fortress and the October lantern festival.",
+    "ko": "강변 진주성과 10월 유등축제."
+   }
+  },
+  {
+   "id": "pohang",
+   "region": "gyeongsang",
+   "scores": {
+    "history": 0,
+    "nature": 2,
+    "food": 2,
+    "cafe": 0,
+    "photo": 2,
+    "calm": 1,
+    "active": 1,
+    "art": 1,
+    "sea": 3
+   },
+   "hours_from_seoul": 2.5,
+   "days": 1,
+   "seasons": [
+    "wi",
+    "su"
+   ],
+   "crowd": 2,
+   "easy": 2,
+   "access": "KTX",
+   "plan": null,
+   "why": {
+    "en": "First sunrise at the 'Hand of Harmony' and winter gwamegi.",
+    "ko": "상생의 손 해맞이와 겨울 과메기."
+   }
+  },
+  {
+   "id": "ulsan",
+   "region": "gyeongsang",
+   "scores": {
+    "history": 1,
+    "nature": 3,
+    "food": 1,
+    "cafe": 0,
+    "photo": 2,
+    "calm": 1,
+    "active": 2,
+    "art": 0,
+    "sea": 3
+   },
+   "hours_from_seoul": 2.5,
+   "days": 2,
+   "seasons": [
+    "sp",
+    "au"
+   ],
+   "crowd": 2,
+   "easy": 2,
+   "access": "KTX",
+   "plan": null,
+   "why": {
+    "en": "Rocky coastal park, bamboo groves on the river and whale history.",
+    "ko": "해안 바위 공원, 강변 대숲, 고래 이야기."
+   }
+  },
+  {
+   "id": "hadong",
+   "region": "gyeongsang",
+   "scores": {
+    "history": 0,
+    "nature": 3,
+    "food": 1,
+    "cafe": 1,
+    "photo": 2,
+    "calm": 3,
+    "active": 1,
+    "art": 0,
+    "sea": 0
+   },
+   "hours_from_seoul": 4,
+   "days": 1,
+   "seasons": [
+    "sp"
+   ],
+   "crowd": 1,
+   "easy": 1,
+   "access": "bus",
+   "plan": null,
+   "why": {
+    "en": "Ten-li cherry-blossom road, tea fields and a riverside market.",
+    "ko": "십리벚꽃길, 녹차밭, 화개장터."
+   }
+  },
+  {
+   "id": "hapcheon",
+   "region": "gyeongsang",
+   "scores": {
+    "history": 3,
+    "nature": 2,
+    "food": 0,
+    "cafe": 0,
+    "photo": 1,
+    "calm": 3,
+    "active": 1,
+    "art": 0,
+    "sea": 0
+   },
+   "hours_from_seoul": 3.5,
+   "days": 1,
+   "seasons": [
+    "au"
+   ],
+   "crowd": 1,
+   "easy": 1,
+   "access": "bus",
+   "plan": null,
+   "why": {
+    "en": "Haeinsa, home of the 80,000 Tripitaka Koreana woodblocks.",
+    "ko": "팔만대장경을 간직한 해인사."
+   }
+  },
+  {
+   "id": "mungyeong",
+   "region": "gyeongsang",
+   "scores": {
+    "history": 2,
+    "nature": 2,
+    "food": 1,
+    "cafe": 0,
+    "photo": 1,
+    "calm": 2,
+    "active": 2,
+    "art": 0,
+    "sea": 0
+   },
+   "hours_from_seoul": 2.5,
+   "days": 1,
+   "seasons": [
+    "au"
+   ],
+   "crowd": 1,
+   "easy": 1,
+   "access": "bus",
+   "plan": null,
+   "why": {
+    "en": "Walk the old scholars' road over the mountain pass.",
+    "ko": "선비들이 넘던 옛 과거길."
+   }
+  },
+  {
+   "id": "cheongsong",
+   "region": "gyeongsang",
+   "scores": {
+    "history": 0,
+    "nature": 3,
+    "food": 1,
+    "cafe": 0,
+    "photo": 3,
+    "calm": 3,
+    "active": 2,
+    "art": 0,
+    "sea": 0
+   },
+   "hours_from_seoul": 4,
+   "days": 2,
+   "seasons": [
+    "au"
+   ],
+   "crowd": 1,
+   "easy": 1,
+   "access": "bus",
+   "plan": null,
+   "why": {
+    "en": "Misty Jusanji pond with trees growing in the water.",
+    "ko": "물속에 나무가 자라는 안개 낀 주산지."
+   }
+  },
+  {
+   "id": "yeongdeok",
+   "region": "gyeongsang",
+   "scores": {
+    "history": 0,
+    "nature": 2,
+    "food": 3,
+    "cafe": 0,
+    "photo": 1,
+    "calm": 1,
+    "active": 2,
+    "art": 0,
+    "sea": 3
+   },
+   "hours_from_seoul": 4,
+   "days": 1,
+   "seasons": [
+    "wi"
+   ],
+   "crowd": 1,
+   "easy": 1,
+   "access": "bus",
+   "plan": null,
+   "why": {
+    "en": "Snow crab country and a long coastal walking trail.",
+    "ko": "대게의 고장과 긴 해안 트레킹길."
+   }
+  },
+  {
+   "id": "bonghwa",
+   "region": "gyeongsang",
+   "scores": {
+    "history": 1,
+    "nature": 3,
+    "food": 0,
+    "cafe": 0,
+    "photo": 2,
+    "calm": 2,
+    "active": 1,
+    "art": 0,
+    "sea": 0
+   },
+   "hours_from_seoul": 4,
+   "days": 1,
+   "seasons": [
+    "wi",
+    "au"
+   ],
+   "crowd": 1,
+   "easy": 1,
+   "access": "train",
+   "plan": null,
+   "why": {
+    "en": "A canyon train through the mountains and a tiny Santa village.",
+    "ko": "산을 가르는 협곡열차와 작은 산타마을."
+   }
+  },
+  {
+   "id": "geochang",
+   "region": "gyeongsang",
+   "scores": {
+    "history": 0,
+    "nature": 3,
+    "food": 0,
+    "cafe": 0,
+    "photo": 2,
+    "calm": 2,
+    "active": 2,
+    "art": 0,
+    "sea": 0
+   },
+   "hours_from_seoul": 3.5,
+   "days": 1,
+   "seasons": [
+    "su",
+    "au"
+   ],
+   "crowd": 1,
+   "easy": 1,
+   "access": "bus",
+   "plan": null,
+   "why": {
+    "en": "Y-shaped suspension bridge and cool valley streams.",
+    "ko": "Y자 출렁다리와 시원한 계곡."
+   }
+  },
+  {
+   "id": "jeju",
+   "region": "island",
+   "scores": {
+    "history": 1,
+    "nature": 3,
+    "food": 3,
+    "cafe": 3,
+    "photo": 3,
+    "calm": 2,
+    "active": 3,
+    "art": 1,
+    "sea": 3
+   },
+   "hours_from_seoul": 2.5,
+   "days": 3,
+   "seasons": [
+    "sp",
+    "su",
+    "au",
+    "wi"
+   ],
+   "crowd": 3,
+   "easy": 2,
+   "access": "flight",
+   "plan": "jeju",
+   "why": {
+    "en": "Volcanic craters, black-stone beaches, forests and tangerines.",
+    "ko": "화산 분화구, 현무암 해변, 숲, 그리고 귤."
+   }
+  },
+  {
+   "id": "ulleungdo",
+   "region": "island",
+   "scores": {
+    "history": 0,
+    "nature": 3,
+    "food": 2,
+    "cafe": 0,
+    "photo": 3,
+    "calm": 2,
+    "active": 3,
+    "art": 0,
+    "sea": 3
+   },
+   "hours_from_seoul": 6,
+   "days": 3,
+   "seasons": [
+    "su"
+   ],
+   "crowd": 1,
+   "easy": 1,
+   "access": "bus+ferry",
+   "plan": null,
+   "why": {
+    "en": "Remote volcanic island of sheer cliffs — the gateway to Dokdo.",
+    "ko": "깎아지른 절벽의 화산섬, 독도로 가는 관문."
+   }
+  }
+ ],
+ "seoul_districts": [
+  {
+   "id": "jongno",
+   "scores": {
+    "history": 3,
+    "nature": 1,
+    "food": 3,
+    "cafe": 2,
+    "photo": 2,
+    "calm": 2,
+    "active": 1,
+    "art": 2,
+    "sea": 0
+   }
+  },
+  {
+   "id": "junggu",
+   "scores": {
+    "history": 2,
+    "nature": 1,
+    "food": 3,
+    "cafe": 1,
+    "photo": 3,
+    "calm": 1,
+    "active": 2,
+    "art": 1,
+    "sea": 0
+   }
+  },
+  {
+   "id": "yongsan",
+   "scores": {
+    "history": 3,
+    "nature": 0,
+    "food": 2,
+    "cafe": 2,
+    "photo": 1,
+    "calm": 1,
+    "active": 1,
+    "art": 3,
+    "sea": 0
+   }
+  },
+  {
+   "id": "mapo",
+   "scores": {
+    "history": 0,
+    "nature": 1,
+    "food": 2,
+    "cafe": 3,
+    "photo": 2,
+    "calm": 1,
+    "active": 1,
+    "art": 2,
+    "sea": 0
+   }
+  },
+  {
+   "id": "seongdong",
+   "scores": {
+    "history": 0,
+    "nature": 2,
+    "food": 1,
+    "cafe": 3,
+    "photo": 2,
+    "calm": 1,
+    "active": 1,
+    "art": 2,
+    "sea": 0
+   }
+  },
+  {
+   "id": "gangnam",
+   "scores": {
+    "history": 1,
+    "nature": 0,
+    "food": 2,
+    "cafe": 2,
+    "photo": 2,
+    "calm": 1,
+    "active": 1,
+    "art": 2,
+    "sea": 0
+   }
+  },
+  {
+   "id": "songpa",
+   "scores": {
+    "history": 0,
+    "nature": 1,
+    "food": 1,
+    "cafe": 1,
+    "photo": 3,
+    "calm": 1,
+    "active": 1,
+    "art": 0,
+    "sea": 0
+   }
+  },
+  {
+   "id": "yeongdeungpo",
+   "scores": {
+    "history": 0,
+    "nature": 2,
+    "food": 1,
+    "cafe": 1,
+    "photo": 2,
+    "calm": 2,
+    "active": 2,
+    "art": 0,
+    "sea": 0
+   }
+  },
+  {
+   "id": "seodaemun",
+   "scores": {
+    "history": 3,
+    "nature": 1,
+    "food": 1,
+    "cafe": 1,
+    "photo": 1,
+    "calm": 1,
+    "active": 2,
+    "art": 0,
+    "sea": 0
+   }
+  },
+  {
+   "id": "gwangjin",
+   "scores": {
+    "history": 0,
+    "nature": 2,
+    "food": 2,
+    "cafe": 1,
+    "photo": 2,
+    "calm": 1,
+    "active": 3,
+    "art": 0,
+    "sea": 0
+   }
+  }
+ ]
+}

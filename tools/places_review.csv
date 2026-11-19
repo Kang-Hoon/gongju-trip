@@ -1,0 +1,53 @@
+﻿id,권역,역사,자연,음식,카페,사진,여유,걷기,예술,바다,서울→시간,추천일수,추천계절,붐빔(1-3),외국인편의(1-3),교통,플래너,한줄(한),한줄(영)
+seoul,seoul,3,1,3,3,3,1,2,3,0,0,3,sp su au wi,3,3,subway,O,"궁궐, 시장, 카페, 한강까지. 처음 한국 여행을 시작하기 가장 쉬운 곳.","Palaces, markets, cafés and the Han River — the easiest place to start."
+incheon,capital,2,1,2,1,2,1,1,1,2,1,1,sp su au wi,2,3,subway,,"공항 바로 옆에서 차이나타운, 개항장 거리, 바다를 볼 수 있어요.","Chinatown, open-port streets and sea views right by the airport."
+suwon,capital,3,1,2,2,2,1,2,1,0,1,1,sp au,2,3,subway,,유네스코 세계유산 성곽을 걷고 수원 통닭으로 마무리.,"Walk a UNESCO fortress wall, then eat Suwon's famous fried chicken."
+ganghwa,capital,3,2,1,1,2,3,1,0,2,2,1,sp au,1,1,bus,,"고인돌, 오래된 사찰, 갯벌 노을.","Prehistoric dolmens, an old temple and tidal-flat sunsets."
+paju,capital,3,1,1,1,1,2,1,2,0,1.5,1,sp au wi,2,2,tour/bus,,DMZ와 분단의 현장을 가까이에서.,See the DMZ and the divided peninsula up close.
+gangneung,gangwon,2,2,2,3,2,2,1,1,3,2,2,sp su au wi,2,2,KTX,O,"바다 보며 커피 한 잔, 조선 유산, 초당순두부.","Coffee with a sea view, Joseon heritage and soft tofu."
+sokcho,gangwon,0,3,2,1,3,1,3,0,3,2.5,2,au wi,2,2,bus,,설악산 봉우리와 동해 바다. 가을 단풍은 국내 최고.,Seoraksan's peaks meet the East Sea — Korea's best autumn colours.
+chuncheon,gangwon,1,2,2,1,2,2,1,1,0,1.5,1,sp au,2,2,ITX,,"호수, 남이섬, 닭갈비. 서울에서 가볍게 다녀오기 좋아요.","Lake views, Nami Island and spicy dakgalbi, an easy hop from Seoul."
+pyeongchang,gangwon,1,3,1,1,2,2,2,0,0,2.5,2,su wi,1,1,KTX+bus,,"여름엔 대관령 양떼목장, 겨울엔 올림픽 스키장.","Mountain sheep farms in summer, Olympic ski slopes in winter."
+yeongwol,gangwon,2,3,1,0,2,3,1,1,0,3,1,au,1,1,bus,,"강이 굽이치는 풍경, 단종의 유배지, 별이 쏟아지는 밤하늘.","River bends, a king's exile site and some of Korea's darkest night skies."
+yangyang,gangwon,1,2,1,2,2,1,3,0,3,2.5,2,su,2,1,bus,,"서핑 성지, 그리고 절벽 위 낙산사 일출.","Korea's surf town, with a cliffside temple for sunrise."
+samcheok,gangwon,0,3,1,0,2,2,2,0,3,3.5,2,su,1,1,bus,,"해상케이블카, 바다 출렁다리, 거대한 석회동굴.","Sea cable car, an ocean suspension bridge and a giant limestone cave."
+inje,gangwon,0,3,0,0,2,3,2,0,0,3,1,wi au,1,1,bus,,겨울이면 북유럽 같아지는 하얀 자작나무 숲.,A silent white birch forest that looks like Scandinavia in winter.
+danyang,chungcheong,1,3,1,1,3,1,3,0,0,2.5,2,sp au,2,1,train,,"강 위의 바위, 스카이워크, 남한강 위 패러글라이딩.","River rocks, skywalks and paragliding over the Namhan River."
+gongjubuyeo,chungcheong,3,1,1,1,2,3,1,1,0,2,2,au sp,1,2,bus,O,백제의 조용한 두 수도. 성곽길과 연못.,"Two quiet capitals of the Baekje Kingdom, with fortress walls and lotus ponds."
+taean,chungcheong,0,3,1,1,2,2,1,0,3,3,2,su au,1,1,bus,,"서해 노을, 소나무 해변, 천리포수목원.","West Sea sunsets, pine-lined beaches and a famous arboretum."
+boryeong,chungcheong,0,2,2,0,1,1,1,0,3,2.5,1,su,2,1,train,,"넓은 해변, 여름 머드축제, 조개구이.","Big beach, a summer mud festival and grilled clams."
+daejeon,chungcheong,1,2,3,2,1,2,1,2,0,1,1,sp su au wi,2,2,KTX,O,"빵지순례, 메타세쿼이아 숲, 무료 온천 족욕.","Bakery pilgrimages, a metasequoia forest and free hot-spring footbaths."
+jecheon,chungcheong,0,3,1,1,2,2,2,0,0,2.5,1,au,1,1,train,,청풍호 케이블카와 호수 위 절벽.,Lake cable car and cliffs over Cheongpung Lake.
+sejong,chungcheong,0,2,0,1,1,2,1,1,0,1.5,1,sp au,1,2,KTX+bus,O,국립수목원과 대형 호수공원이 있는 정원도시.,A new garden city with a national arboretum and a huge lake park.
+cheongju,chungcheong,2,2,1,1,2,1,2,3,0,1.5,1,au sp,1,2,bus,O,"수장형 미술관, 벽화마을, 호숫가 대통령 별장.","An art-storage museum, mural village and a presidential retreat on a lake."
+jeonju,jeolla,3,0,3,2,3,1,1,1,0,2,2,sp au,3,3,KTX,O,한옥 800채와 국내 최고의 맛 도시. 비빔밥의 고향.,800 hanok houses and Korea's best food city — bibimbap was born here.
+yeosu,jeolla,1,2,3,1,3,1,1,0,3,3,2,sp su,2,2,KTX,,"낭만의 밤바다, 해상케이블카, 게장백반.","Romantic night sea, a sea cable car and crab-marinated rice."
+suncheon,jeolla,1,3,1,1,2,3,1,0,1,2.5,1,au,2,2,KTX,,노을 지는 갈대밭과 국가정원.,Golden reed fields at sunset and Korea's national garden.
+damyang,jeolla,0,3,2,1,2,2,1,0,0,3,1,su au,2,1,bus,,대나무 숲길과 떡갈비.,Bamboo forest walks and grilled tteokgalbi.
+mokpo,jeolla,2,1,3,0,2,1,1,0,2,2.5,2,sp au,1,1,KTX,,"근대 거리가 남은 항구, 남도 음식의 본고장.",Port city of colonial-era streets and the richest Namdo cooking.
+gunsan,jeolla,3,0,2,2,2,2,1,1,1,2.5,1,sp au wi,1,1,bus,,1930년대에 멈춘 듯한 레트로 거리와 오래된 빵집.,"A retro town frozen in the 1930s, with Korea's oldest bakery."
+boseong,jeolla,0,3,1,1,3,3,1,0,1,4,1,sp su,1,1,bus,,굽이치는 초록 녹차밭.,Rolling green tea terraces.
+cheongsando,jeolla,0,3,1,0,2,3,2,0,2,5.5,2,sp,1,1,bus+ferry,,유채꽃과 돌담길의 슬로시티 섬.,A slow-city island of canola fields and stone-wall roads.
+buan,jeolla,1,3,1,0,2,2,1,0,3,3.5,1,au,1,1,bus,,켜켜이 쌓인 해안 절벽과 전나무 숲길.,Layered sea cliffs and a fir-lined temple path.
+gochang,jeolla,2,2,2,0,2,2,1,0,0,3,1,au,1,1,bus,,유네스코 고인돌과 초가을 선운사 꽃무릇.,UNESCO dolmens and red spider lilies at Seonunsa in early autumn.
+namwon,jeolla,2,2,2,0,1,2,1,0,0,2.5,1,sp au,1,1,KTX,,"춘향전의 무대, 지리산 자락의 정원.","The garden of Korea's most famous love story, at the foot of Jirisan."
+gurye,jeolla,1,3,1,0,2,3,2,0,0,3.5,2,sp au,1,1,train,,지리산 사찰과 산수유로 노랗게 물드는 마을.,Jirisan temples and a village that turns yellow with cornus blossoms.
+busan,gyeongsang,1,2,3,2,3,1,2,2,3,2.5,3,sp su au wi,3,3,KTX,O,"해변, 산동네, 수산시장, 반짝이는 다리.","Beaches, hillside villages, seafood markets and glittering bridges."
+gyeongju,gyeongsang,3,2,2,2,3,2,2,1,0,2.5,2,sp au,3,3,KTX,O,"신라 천년의 수도. 왕릉, 사찰, 밤의 연못.","Silla's thousand-year capital — tombs, temples and glowing ponds at night."
+andong,gyeongsang,3,1,2,0,2,3,1,1,0,3,2,au,2,2,KTX,,가장 잘 보존된 전통 마을과 서원.,Korea's best-preserved traditional village and Confucian academies.
+tongyeong,gyeongsang,1,2,3,1,3,1,1,2,3,4,2,sp au,2,1,bus,,"섬이 흩어진 항구, 벽화마을, 싱싱한 굴.","Island-dotted harbour, mural village and fresh oysters."
+namhae,gyeongsang,0,3,1,1,3,3,1,0,3,4.5,2,sp,1,1,bus,,바다로 떨어지는 다랭이 논.,Terraced rice paddies falling into the sea.
+geoje,gyeongsang,0,2,1,1,3,1,1,0,3,4.5,2,sp su,2,1,bus,,바람의 언덕 풍차와 섬 정원 외도.,Windy-hill windmill and a botanical island garden.
+daegu,gyeongsang,2,1,3,2,1,1,1,1,0,2,1,sp au,2,2,KTX,,근대골목과 야시장. 음식과 패션의 도시.,Modern-history alleys and night markets in Korea's food-and-fashion city.
+jinju,gyeongsang,3,1,2,0,2,2,1,0,0,3.5,1,au,1,1,bus,,강변 진주성과 10월 유등축제.,Riverside fortress and the October lantern festival.
+pohang,gyeongsang,0,2,2,0,2,1,1,1,3,2.5,1,wi su,2,2,KTX,,상생의 손 해맞이와 겨울 과메기.,First sunrise at the 'Hand of Harmony' and winter gwamegi.
+ulsan,gyeongsang,1,3,1,0,2,1,2,0,3,2.5,2,sp au,2,2,KTX,,"해안 바위 공원, 강변 대숲, 고래 이야기.","Rocky coastal park, bamboo groves on the river and whale history."
+hadong,gyeongsang,0,3,1,1,2,3,1,0,0,4,1,sp,1,1,bus,,"십리벚꽃길, 녹차밭, 화개장터.","Ten-li cherry-blossom road, tea fields and a riverside market."
+hapcheon,gyeongsang,3,2,0,0,1,3,1,0,0,3.5,1,au,1,1,bus,,팔만대장경을 간직한 해인사.,"Haeinsa, home of the 80,000 Tripitaka Koreana woodblocks."
+mungyeong,gyeongsang,2,2,1,0,1,2,2,0,0,2.5,1,au,1,1,bus,,선비들이 넘던 옛 과거길.,Walk the old scholars' road over the mountain pass.
+cheongsong,gyeongsang,0,3,1,0,3,3,2,0,0,4,2,au,1,1,bus,,물속에 나무가 자라는 안개 낀 주산지.,Misty Jusanji pond with trees growing in the water.
+yeongdeok,gyeongsang,0,2,3,0,1,1,2,0,3,4,1,wi,1,1,bus,,대게의 고장과 긴 해안 트레킹길.,Snow crab country and a long coastal walking trail.
+bonghwa,gyeongsang,1,3,0,0,2,2,1,0,0,4,1,wi au,1,1,train,,산을 가르는 협곡열차와 작은 산타마을.,A canyon train through the mountains and a tiny Santa village.
+geochang,gyeongsang,0,3,0,0,2,2,2,0,0,3.5,1,su au,1,1,bus,,Y자 출렁다리와 시원한 계곡.,Y-shaped suspension bridge and cool valley streams.
+jeju,island,1,3,3,3,3,2,3,1,3,2.5,3,sp su au wi,3,2,flight,O,"화산 분화구, 현무암 해변, 숲, 그리고 귤.","Volcanic craters, black-stone beaches, forests and tangerines."
+ulleungdo,island,0,3,2,0,3,2,3,0,3,6,3,su,1,1,bus+ferry,,"깎아지른 절벽의 화산섬, 독도로 가는 관문.",Remote volcanic island of sheer cliffs — the gateway to Dokdo.
