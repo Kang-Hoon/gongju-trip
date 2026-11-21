@@ -3,6 +3,7 @@ import { QUESTIONS } from "./quiz.js";
 import { buildPlan, cityById, cityMatches, computeProfile, persona, toHHMM, toMin } from "./planner.js";
 import { getLang, L, setLang, t } from "./i18n.js";
 import { myVote, online, submitSurvey, voteCounts, voteTheme } from "./store.js";
+import { renderFinder, renderMatch, resetFinder } from "./finder.js";
 
 // ---------------- State ----------------
 const DEFAULTS = { name: "", cityId: "auto", days: 1, date: "", start: "10:00", end: "19:00", origin: "seoul", mode: "transit" };
@@ -34,6 +35,11 @@ function route() {
   if (path === "/setup") return renderSetup();
   if (path === "/quiz") return renderQuiz();
   if (path === "/plan") return renderPlan(new URLSearchParams(query || ""));
+  if (path === "/find") return renderFinder(app, go);
+  if (path === "/match") return renderMatch(app, new URLSearchParams(query || ""), go, (cityId, days) => {
+    state.settings = { ...state.settings, cityId, days };
+    go("#/setup");
+  });
   return renderHome();
 }
 window.addEventListener("hashchange", route);
@@ -56,19 +62,19 @@ async function renderHome() {
   app.innerHTML = `
     <section class="hero">
       <div class="eyebrow">${t("heroEyebrow")}</div>
-      <h1>${t("heroTitle")}</h1>
-      <p class="lead">${t("heroSub")}</p>
+      <h1>${t("heroTitle2")}</h1>
+      <p class="lead">${t("heroSub2")}</p>
       <div class="row">
-        <button class="btn" id="start">${t("startPlanning")}</button>
-        <button class="btn ghost" id="quizFirst">${t("notSure")}</button>
+        <button class="btn" id="findBtn">${t("findCity")}</button>
+        <button class="btn ghost" id="start">${t("knowWhere")}</button>
         <a class="btn ghost" href="badges/" style="text-decoration:none">${t("badgesLink")}</a>
       </div>
     </section>
-    <h2 class="section-title">${t("cities")}</h2>
+    <h2 class="section-title">${t("plannerCities")}</h2>
     <div class="city-grid" id="cityGrid">${CITIES.map(cityCard).join("")}</div>`;
 
   document.getElementById("start").onclick = () => go("#/setup");
-  document.getElementById("quizFirst").onclick = () => { state.settings.cityId = "auto"; go("#/setup"); };
+  document.getElementById("findBtn").onclick = () => { resetFinder(); go("#/find"); };
   bindCityCards();
 
   state.counts = await voteCounts();

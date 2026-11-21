@@ -43,6 +43,15 @@
    "why": {
     "en": "Palaces, markets, cafés and the Han River — the easiest place to start.",
     "ko": "궁궐, 시장, 카페, 한강까지. 처음 한국 여행을 시작하기 가장 쉬운 곳."
+   },
+   "name": {
+    "ko": "서울",
+    "en": "Seoul"
+   },
+   "badge": null,
+   "highlights": {
+    "ko": "궁궐과 북촌, 광장시장, 성수 카페, 남산, 한강",
+    "en": "Palaces and Bukchon, Gwangjang Market, Seongsu cafés, Namsan, the Han River"
    }
   },
   {
@@ -74,6 +83,18 @@
    "why": {
     "en": "Chinatown, open-port streets and sea views right by the airport.",
     "ko": "공항 바로 옆에서 차이나타운, 개항장 거리, 바다를 볼 수 있어요."
+   },
+   "name": {
+    "ko": "인천",
+    "en": "Incheon"
+   },
+   "badge": {
+    "ko": "개항장 산책",
+    "en": "Port City Walker"
+   },
+   "highlights": {
+    "ko": "차이나타운, 개항장 거리, 월미도, 송도 야경",
+    "en": "Chinatown, open-port streets, Wolmido, Songdo at night"
    }
   },
   {
@@ -103,6 +124,18 @@
    "why": {
     "en": "Walk a UNESCO fortress wall, then eat Suwon's famous fried chicken.",
     "ko": "유네스코 세계유산 성곽을 걷고 수원 통닭으로 마무리."
+   },
+   "name": {
+    "ko": "수원",
+    "en": "Suwon"
+   },
+   "badge": {
+    "ko": "화성 성곽 지킴이",
+    "en": "Fortress Guard"
+   },
+   "highlights": {
+    "ko": "수원화성 성곽길, 행궁동, 통닭거리",
+    "en": "Hwaseong Fortress walls, Haenggung-dong, fried chicken street"
    }
   },
   {
@@ -132,6 +165,18 @@
    "why": {
     "en": "Prehistoric dolmens, an old temple and tidal-flat sunsets.",
     "ko": "고인돌, 오래된 사찰, 갯벌 노을."
+   },
+   "name": {
+    "ko": "강화도",
+    "en": "Ganghwa"
+   },
+   "badge": {
+    "ko": "고인돌 탐험가",
+    "en": "Dolmen Hunter"
+   },
+   "highlights": {
+    "ko": "강화 고인돌, 전등사, 갯벌 노을",
+    "en": "Ganghwa dolmens, Jeondeungsa, tidal-flat sunset"
    }
   },
   {
@@ -162,6 +207,18 @@
    "why": {
     "en": "See the DMZ and the divided peninsula up close.",
     "ko": "DMZ와 분단의 현장을 가까이에서."
+   },
+   "name": {
+    "ko": "파주",
+    "en": "Paju"
+   },
+   "badge": {
+    "ko": "DMZ 방문자",
+    "en": "DMZ Visitor"
+   },
+   "highlights": {
+    "ko": "임진각, DMZ 투어, 헤이리 예술마을",
+    "en": "Imjingak, DMZ tour, Heyri Art Village"
    }
   },
   {
@@ -193,6 +250,18 @@
    "why": {
     "en": "Coffee with a sea view, Joseon heritage and soft tofu.",
     "ko": "바다 보며 커피 한 잔, 조선 유산, 초당순두부."
+   },
+   "name": {
+    "ko": "강릉",
+    "en": "Gangneung"
+   },
+   "badge": {
+    "ko": "바다 커피 한 잔",
+    "en": "Coffee by the Sea"
+   },
+   "highlights": {
+    "ko": "안목해변 카페거리, 경포대, 오죽헌",
+    "en": "Anmok coffee street, Gyeongpodae, Ojukheon"
    }
   },
   {
@@ -222,6 +291,18 @@
    "why": {
     "en": "Seoraksan's peaks meet the East Sea — Korea's best autumn colours.",
     "ko": "설악산 봉우리와 동해 바다. 가을 단풍은 국내 최고."
+   },
+   "name": {
+    "ko": "속초·설악산",
+    "en": "Sokcho & Seoraksan"
+   },
+   "badge": {
+    "ko": "설악의 정상",
+    "en": "Seorak Summit"
+   },
+   "highlights": {
+    "ko": "설악산 케이블카, 울산바위, 중앙시장",
+    "en": "Seoraksan cable car, Ulsanbawi, Jungang Market"
    }
   },
   {
@@ -251,6 +332,18 @@
    "why": {
     "en": "Lake views, Nami Island and spicy dakgalbi, an easy hop from Seoul.",
     "ko": "호수, 남이섬, 닭갈비. 서울에서 가볍게 다녀오기 좋아요."
+   },
+   "name": {
+    "ko": "춘천·가평",
+    "en": "Chuncheon & Gapyeong"
+   },
+   "badge": {
+    "ko": "호반의 여행자",
+    "en": "Lakeside Drifter"
+   },
+   "highlights": {
+    "ko": "남이섬, 소양강 스카이워크, 닭갈비",
+    "en": "Nami Island, Soyang River skywalk, dakgalbi"
    }
   },
   {
@@ -280,6 +373,18 @@
    "why": {
     "en": "Mountain sheep farms in summer, Olympic ski slopes in winter.",
     "ko": "여름엔 대관령 양떼목장, 겨울엔 올림픽 스키장."
+   },
+   "name": {
+    "ko": "평창·정선",
+    "en": "Pyeongchang & Jeongseon"
+   },
+   "badge": {
+    "ko": "대관령 목동",
+    "en": "Mountain Shepherd"
+   },
+   "highlights": {
+    "ko": "대관령 양떼목장, 정선 5일장, 레일바이크",
+    "en": "Daegwallyeong sheep farm, Jeongseon market, rail bike"
    }
   },
   {
@@ -308,6 +413,18 @@
    "why": {
     "en": "River bends, a king's exile site and some of Korea's darkest night skies.",
     "ko": "강이 굽이치는 풍경, 단종의 유배지, 별이 쏟아지는 밤하늘."
+   },
+   "name": {
+    "ko": "영월",
+    "en": "Yeongwol"
+   },
+   "badge": {
+    "ko": "별 헤는 밤",
+    "en": "Stargazer"
+   },
+   "highlights": {
+    "ko": "한반도 지형, 청령포, 별마로천문대",
+    "en": "Korean-peninsula river bend, Cheongnyeongpo, Byeolmaro Observatory"
    }
   },
   {
@@ -336,6 +453,18 @@
    "why": {
     "en": "Korea's surf town, with a cliffside temple for sunrise.",
     "ko": "서핑 성지, 그리고 절벽 위 낙산사 일출."
+   },
+   "name": {
+    "ko": "양양",
+    "en": "Yangyang"
+   },
+   "badge": {
+    "ko": "동해 서퍼",
+    "en": "East Sea Surfer"
+   },
+   "highlights": {
+    "ko": "서피비치, 죽도해변, 낙산사 일출",
+    "en": "Surfyy Beach, Jukdo Beach, Naksansa sunrise"
    }
   },
   {
@@ -364,6 +493,18 @@
    "why": {
     "en": "Sea cable car, an ocean suspension bridge and a giant limestone cave.",
     "ko": "해상케이블카, 바다 출렁다리, 거대한 석회동굴."
+   },
+   "name": {
+    "ko": "삼척",
+    "en": "Samcheok"
+   },
+   "badge": {
+    "ko": "바다 위 케이블카",
+    "en": "Sea Cable Rider"
+   },
+   "highlights": {
+    "ko": "해상케이블카, 바다 출렁다리, 환선굴",
+    "en": "Sea cable car, ocean suspension bridge, Hwanseongul Cave"
    }
   },
   {
@@ -393,6 +534,18 @@
    "why": {
     "en": "A silent white birch forest that looks like Scandinavia in winter.",
     "ko": "겨울이면 북유럽 같아지는 하얀 자작나무 숲."
+   },
+   "name": {
+    "ko": "인제",
+    "en": "Inje"
+   },
+   "badge": {
+    "ko": "자작나무 숲길",
+    "en": "Birch Forest Walker"
+   },
+   "highlights": {
+    "ko": "원대리 자작나무숲, 내린천",
+    "en": "Wondae-ri birch forest, Naerincheon"
    }
   },
   {
@@ -422,6 +575,18 @@
    "why": {
     "en": "River rocks, skywalks and paragliding over the Namhan River.",
     "ko": "강 위의 바위, 스카이워크, 남한강 위 패러글라이딩."
+   },
+   "name": {
+    "ko": "단양",
+    "en": "Danyang"
+   },
+   "badge": {
+    "ko": "도담삼봉 비행사",
+    "en": "Danyang Flyer"
+   },
+   "highlights": {
+    "ko": "도담삼봉, 만천하스카이워크, 패러글라이딩",
+    "en": "Dodamsambong, Mancheonha Skywalk, paragliding"
    }
   },
   {
@@ -451,6 +616,18 @@
    "why": {
     "en": "Two quiet capitals of the Baekje Kingdom, with fortress walls and lotus ponds.",
     "ko": "백제의 조용한 두 수도. 성곽길과 연못."
+   },
+   "name": {
+    "ko": "공주·부여",
+    "en": "Gongju & Buyeo"
+   },
+   "badge": {
+    "ko": "백제 왕도 순례",
+    "en": "Baekje Pilgrim"
+   },
+   "highlights": {
+    "ko": "공산성, 무령왕릉, 부소산성, 궁남지",
+    "en": "Gongsanseong, King Muryeong's Tombs, Busosanseong, Gungnamji"
    }
   },
   {
@@ -480,6 +657,18 @@
    "why": {
     "en": "West Sea sunsets, pine-lined beaches and a famous arboretum.",
     "ko": "서해 노을, 소나무 해변, 천리포수목원."
+   },
+   "name": {
+    "ko": "태안",
+    "en": "Taean"
+   },
+   "badge": {
+    "ko": "서해 노을 사냥꾼",
+    "en": "Sunset Chaser"
+   },
+   "highlights": {
+    "ko": "꽃지해변 노을, 천리포수목원",
+    "en": "Kkotji Beach sunset, Chollipo Arboretum"
    }
   },
   {
@@ -508,6 +697,18 @@
    "why": {
     "en": "Big beach, a summer mud festival and grilled clams.",
     "ko": "넓은 해변, 여름 머드축제, 조개구이."
+   },
+   "name": {
+    "ko": "보령",
+    "en": "Boryeong"
+   },
+   "badge": {
+    "ko": "머드 파이터",
+    "en": "Mud Fighter"
+   },
+   "highlights": {
+    "ko": "대천해수욕장, 머드축제, 조개구이",
+    "en": "Daecheon Beach, Mud Festival, grilled clams"
    }
   },
   {
@@ -539,6 +740,18 @@
    "why": {
     "en": "Bakery pilgrimages, a metasequoia forest and free hot-spring footbaths.",
     "ko": "빵지순례, 메타세쿼이아 숲, 무료 온천 족욕."
+   },
+   "name": {
+    "ko": "대전",
+    "en": "Daejeon"
+   },
+   "badge": {
+    "ko": "빵지순례자",
+    "en": "Bread Pilgrim"
+   },
+   "highlights": {
+    "ko": "성심당, 장태산 휴양림, 유성온천 족욕",
+    "en": "Sungsimdang, Jangtaesan forest, Yuseong footbath"
    }
   },
   {
@@ -567,6 +780,18 @@
    "why": {
     "en": "Lake cable car and cliffs over Cheongpung Lake.",
     "ko": "청풍호 케이블카와 호수 위 절벽."
+   },
+   "name": {
+    "ko": "제천",
+    "en": "Jecheon"
+   },
+   "badge": {
+    "ko": "청풍호 유람객",
+    "en": "Lake Wanderer"
+   },
+   "highlights": {
+    "ko": "청풍호반 케이블카, 의림지, 옥순봉 출렁다리",
+    "en": "Cheongpung cable car, Uirimji, Oksunbong bridge"
    }
   },
   {
@@ -596,6 +821,18 @@
    "why": {
     "en": "A new garden city with a national arboretum and a huge lake park.",
     "ko": "국립수목원과 대형 호수공원이 있는 정원도시."
+   },
+   "name": {
+    "ko": "세종",
+    "en": "Sejong"
+   },
+   "badge": {
+    "ko": "정원도시 산책자",
+    "en": "Garden City Walker"
+   },
+   "highlights": {
+    "ko": "국립세종수목원, 세종호수공원, 금강보행교 야경",
+    "en": "National Sejong Arboretum, Sejong Lake Park, Geumgang bridge at night"
    }
   },
   {
@@ -625,6 +862,18 @@
    "why": {
     "en": "An art-storage museum, mural village and a presidential retreat on a lake.",
     "ko": "수장형 미술관, 벽화마을, 호숫가 대통령 별장."
+   },
+   "name": {
+    "ko": "청주",
+    "en": "Cheongju"
+   },
+   "badge": {
+    "ko": "수장고 감상가",
+    "en": "Art Vault Viewer"
+   },
+   "highlights": {
+    "ko": "국립현대미술관 청주, 수암골, 상당산성, 청남대",
+    "en": "MMCA Cheongju, Suamgol, Sangdangsanseong, Cheongnamdae"
    }
   },
   {
@@ -654,6 +903,18 @@
    "why": {
     "en": "800 hanok houses and Korea's best food city — bibimbap was born here.",
     "ko": "한옥 800채와 국내 최고의 맛 도시. 비빔밥의 고향."
+   },
+   "name": {
+    "ko": "전주",
+    "en": "Jeonju"
+   },
+   "badge": {
+    "ko": "한옥 지붕 아래",
+    "en": "Under Hanok Roofs"
+   },
+   "highlights": {
+    "ko": "한옥마을, 경기전, 비빔밥, 막걸리집",
+    "en": "Hanok Village, Gyeonggijeon, bibimbap, makgeolli house"
    }
   },
   {
@@ -683,6 +944,18 @@
    "why": {
     "en": "Romantic night sea, a sea cable car and crab-marinated rice.",
     "ko": "낭만의 밤바다, 해상케이블카, 게장백반."
+   },
+   "name": {
+    "ko": "여수",
+    "en": "Yeosu"
+   },
+   "badge": {
+    "ko": "여수 밤바다",
+    "en": "Yeosu Night Sea"
+   },
+   "highlights": {
+    "ko": "해상케이블카, 돌산대교 야경, 낭만포차",
+    "en": "Sea cable car, Dolsan Bridge at night, harbour food tents"
    }
   },
   {
@@ -711,6 +984,18 @@
    "why": {
     "en": "Golden reed fields at sunset and Korea's national garden.",
     "ko": "노을 지는 갈대밭과 국가정원."
+   },
+   "name": {
+    "ko": "순천",
+    "en": "Suncheon"
+   },
+   "badge": {
+    "ko": "갈대밭의 노을",
+    "en": "Reed Field Dreamer"
+   },
+   "highlights": {
+    "ko": "순천만 갈대밭, 국가정원, 낙안읍성",
+    "en": "Suncheon Bay reeds, National Garden, Naganeupseong"
    }
   },
   {
@@ -740,6 +1025,18 @@
    "why": {
     "en": "Bamboo forest walks and grilled tteokgalbi.",
     "ko": "대나무 숲길과 떡갈비."
+   },
+   "name": {
+    "ko": "담양",
+    "en": "Damyang"
+   },
+   "badge": {
+    "ko": "대숲 바람",
+    "en": "Bamboo Breeze"
+   },
+   "highlights": {
+    "ko": "죽녹원, 메타세쿼이아길, 떡갈비",
+    "en": "Juknokwon, Metasequoia Road, tteokgalbi"
    }
   },
   {
@@ -769,6 +1066,18 @@
    "why": {
     "en": "Port city of colonial-era streets and the richest Namdo cooking.",
     "ko": "근대 거리가 남은 항구, 남도 음식의 본고장."
+   },
+   "name": {
+    "ko": "목포",
+    "en": "Mokpo"
+   },
+   "badge": {
+    "ko": "항구의 낭만",
+    "en": "Harbour Romantic"
+   },
+   "highlights": {
+    "ko": "근대역사거리, 유달산, 해상케이블카",
+    "en": "Modern history street, Yudalsan, sea cable car"
    }
   },
   {
@@ -799,6 +1108,18 @@
    "why": {
     "en": "A retro town frozen in the 1930s, with Korea's oldest bakery.",
     "ko": "1930년대에 멈춘 듯한 레트로 거리와 오래된 빵집."
+   },
+   "name": {
+    "ko": "군산",
+    "en": "Gunsan"
+   },
+   "badge": {
+    "ko": "시간 여행자",
+    "en": "Retro Time Traveller"
+   },
+   "highlights": {
+    "ko": "근대 거리, 경암동 철길마을, 이성당",
+    "en": "Modern-era streets, Gyeongam railway village, Lee Sung Dang bakery"
    }
   },
   {
@@ -828,6 +1149,18 @@
    "why": {
     "en": "Rolling green tea terraces.",
     "ko": "굽이치는 초록 녹차밭."
+   },
+   "name": {
+    "ko": "보성",
+    "en": "Boseong"
+   },
+   "badge": {
+    "ko": "녹차밭 산책",
+    "en": "Green Tea Walker"
+   },
+   "highlights": {
+    "ko": "보성 녹차밭, 율포 해변",
+    "en": "Boseong tea fields, Yulpo Beach"
    }
   },
   {
@@ -856,6 +1189,18 @@
    "why": {
     "en": "A slow-city island of canola fields and stone-wall roads.",
     "ko": "유채꽃과 돌담길의 슬로시티 섬."
+   },
+   "name": {
+    "ko": "완도 청산도",
+    "en": "Cheongsando"
+   },
+   "badge": {
+    "ko": "슬로시티 산책자",
+    "en": "Slow City Walker"
+   },
+   "highlights": {
+    "ko": "유채꽃길, 구들장논, 서편제 돌담길",
+    "en": "Canola fields, gudeuljang rice terraces, stone-wall road"
    }
   },
   {
@@ -884,6 +1229,18 @@
    "why": {
     "en": "Layered sea cliffs and a fir-lined temple path.",
     "ko": "켜켜이 쌓인 해안 절벽과 전나무 숲길."
+   },
+   "name": {
+    "ko": "부안",
+    "en": "Buan"
+   },
+   "badge": {
+    "ko": "채석강 탐사",
+    "en": "Cliff Reader"
+   },
+   "highlights": {
+    "ko": "채석강, 내소사 전나무숲길, 변산반도",
+    "en": "Chaeseokgang cliffs, Naesosa fir path, Byeonsan Peninsula"
    }
   },
   {
@@ -912,6 +1269,18 @@
    "why": {
     "en": "UNESCO dolmens and red spider lilies at Seonunsa in early autumn.",
     "ko": "유네스코 고인돌과 초가을 선운사 꽃무릇."
+   },
+   "name": {
+    "ko": "고창",
+    "en": "Gochang"
+   },
+   "badge": {
+    "ko": "꽃무릇 탐방",
+    "en": "Red Spider Lily Seeker"
+   },
+   "highlights": {
+    "ko": "고인돌 유적, 선운사 꽃무릇, 풍천장어",
+    "en": "Dolmen sites, Seonunsa lilies, grilled eel"
    }
   },
   {
@@ -941,6 +1310,18 @@
    "why": {
     "en": "The garden of Korea's most famous love story, at the foot of Jirisan.",
     "ko": "춘향전의 무대, 지리산 자락의 정원."
+   },
+   "name": {
+    "ko": "남원",
+    "en": "Namwon"
+   },
+   "badge": {
+    "ko": "춘향의 정원",
+    "en": "Chunhyang's Garden"
+   },
+   "highlights": {
+    "ko": "광한루원, 지리산 뱀사골, 추어탕",
+    "en": "Gwanghallu garden, Baemsagol valley, loach soup"
    }
   },
   {
@@ -970,6 +1351,18 @@
    "why": {
     "en": "Jirisan temples and a village that turns yellow with cornus blossoms.",
     "ko": "지리산 사찰과 산수유로 노랗게 물드는 마을."
+   },
+   "name": {
+    "ko": "구례",
+    "en": "Gurye"
+   },
+   "badge": {
+    "ko": "산수유 마을",
+    "en": "Cornus Village"
+   },
+   "highlights": {
+    "ko": "화엄사, 노고단, 산수유마을",
+    "en": "Hwaeomsa, Nogodan, cornus blossom village"
    }
   },
   {
@@ -1001,6 +1394,18 @@
    "why": {
     "en": "Beaches, hillside villages, seafood markets and glittering bridges.",
     "ko": "해변, 산동네, 수산시장, 반짝이는 다리."
+   },
+   "name": {
+    "ko": "부산",
+    "en": "Busan"
+   },
+   "badge": {
+    "ko": "바다 사나이",
+    "en": "Sea Dog"
+   },
+   "highlights": {
+    "ko": "해운대, 감천문화마을, 자갈치시장, 광안대교",
+    "en": "Haeundae, Gamcheon village, Jagalchi Market, Gwangan Bridge"
    }
   },
   {
@@ -1030,6 +1435,18 @@
    "why": {
     "en": "Silla's thousand-year capital — tombs, temples and glowing ponds at night.",
     "ko": "신라 천년의 수도. 왕릉, 사찰, 밤의 연못."
+   },
+   "name": {
+    "ko": "경주",
+    "en": "Gyeongju"
+   },
+   "badge": {
+    "ko": "천년 고도",
+    "en": "Thousand-Year Capital"
+   },
+   "highlights": {
+    "ko": "불국사, 석굴암, 대릉원, 동궁과 월지",
+    "en": "Bulguksa, Seokguram, Daereungwon, Donggung Palace & Wolji"
    }
   },
   {
@@ -1058,6 +1475,18 @@
    "why": {
     "en": "Korea's best-preserved traditional village and Confucian academies.",
     "ko": "가장 잘 보존된 전통 마을과 서원."
+   },
+   "name": {
+    "ko": "안동",
+    "en": "Andong"
+   },
+   "badge": {
+    "ko": "하회탈의 미소",
+    "en": "Mask Smile"
+   },
+   "highlights": {
+    "ko": "하회마을, 병산서원, 안동찜닭",
+    "en": "Hahoe Village, Byeongsan Seowon, jjimdak"
    }
   },
   {
@@ -1087,6 +1516,18 @@
    "why": {
     "en": "Island-dotted harbour, mural village and fresh oysters.",
     "ko": "섬이 흩어진 항구, 벽화마을, 싱싱한 굴."
+   },
+   "name": {
+    "ko": "통영",
+    "en": "Tongyeong"
+   },
+   "badge": {
+    "ko": "한려수도 항해사",
+    "en": "Island Navigator"
+   },
+   "highlights": {
+    "ko": "케이블카, 동피랑 벽화마을, 충무김밥",
+    "en": "Cable car, Dongpirang murals, chungmu gimbap"
    }
   },
   {
@@ -1115,6 +1556,18 @@
    "why": {
     "en": "Terraced rice paddies falling into the sea.",
     "ko": "바다로 떨어지는 다랭이 논."
+   },
+   "name": {
+    "ko": "남해",
+    "en": "Namhae"
+   },
+   "badge": {
+    "ko": "다랭이 논두렁",
+    "en": "Terrace Farmer"
+   },
+   "highlights": {
+    "ko": "다랭이마을, 독일마을, 보리암",
+    "en": "Darangi village, German Village, Boriam"
    }
   },
   {
@@ -1144,6 +1597,18 @@
    "why": {
     "en": "Windy-hill windmill and a botanical island garden.",
     "ko": "바람의 언덕 풍차와 섬 정원 외도."
+   },
+   "name": {
+    "ko": "거제",
+    "en": "Geoje"
+   },
+   "badge": {
+    "ko": "바람의 언덕",
+    "en": "Windy Hill"
+   },
+   "highlights": {
+    "ko": "바람의언덕, 외도 보타니아",
+    "en": "Windy Hill, Oedo Botania"
    }
   },
   {
@@ -1173,6 +1638,18 @@
    "why": {
     "en": "Modern-history alleys and night markets in Korea's food-and-fashion city.",
     "ko": "근대골목과 야시장. 음식과 패션의 도시."
+   },
+   "name": {
+    "ko": "대구",
+    "en": "Daegu"
+   },
+   "badge": {
+    "ko": "근대골목 미식가",
+    "en": "Alley Gourmet"
+   },
+   "highlights": {
+    "ko": "근대골목, 김광석길, 서문시장 야시장",
+    "en": "Modern alleys, Kim Kwang-seok Street, Seomun night market"
    }
   },
   {
@@ -1201,6 +1678,18 @@
    "why": {
     "en": "Riverside fortress and the October lantern festival.",
     "ko": "강변 진주성과 10월 유등축제."
+   },
+   "name": {
+    "ko": "진주",
+    "en": "Jinju"
+   },
+   "badge": {
+    "ko": "남강 유등",
+    "en": "Lantern River"
+   },
+   "highlights": {
+    "ko": "진주성, 남강 유등, 진주냉면",
+    "en": "Jinju Fortress, Namgang lanterns, Jinju naengmyeon"
    }
   },
   {
@@ -1230,6 +1719,18 @@
    "why": {
     "en": "First sunrise at the 'Hand of Harmony' and winter gwamegi.",
     "ko": "상생의 손 해맞이와 겨울 과메기."
+   },
+   "name": {
+    "ko": "포항",
+    "en": "Pohang"
+   },
+   "badge": {
+    "ko": "호미곶 해맞이",
+    "en": "First Sunrise"
+   },
+   "highlights": {
+    "ko": "호미곶 상생의 손, 영일대, 스페이스워크",
+    "en": "Homigot Hand of Harmony, Yeongildae, Space Walk"
    }
   },
   {
@@ -1259,6 +1760,18 @@
    "why": {
     "en": "Rocky coastal park, bamboo groves on the river and whale history.",
     "ko": "해안 바위 공원, 강변 대숲, 고래 이야기."
+   },
+   "name": {
+    "ko": "울산",
+    "en": "Ulsan"
+   },
+   "badge": {
+    "ko": "고래의 바다",
+    "en": "Whale Coast"
+   },
+   "highlights": {
+    "ko": "대왕암공원, 태화강 십리대숲, 간절곶",
+    "en": "Daewangam Park, Taehwa River bamboo, Ganjeolgot"
    }
   },
   {
@@ -1287,6 +1800,18 @@
    "why": {
     "en": "Ten-li cherry-blossom road, tea fields and a riverside market.",
     "ko": "십리벚꽃길, 녹차밭, 화개장터."
+   },
+   "name": {
+    "ko": "하동",
+    "en": "Hadong"
+   },
+   "badge": {
+    "ko": "십리 벚꽃길",
+    "en": "Blossom Road"
+   },
+   "highlights": {
+    "ko": "화개장터, 쌍계사, 십리벚꽃길, 녹차밭",
+    "en": "Hwagae market, Ssanggyesa, cherry-blossom road, tea fields"
    }
   },
   {
@@ -1315,6 +1840,18 @@
    "why": {
     "en": "Haeinsa, home of the 80,000 Tripitaka Koreana woodblocks.",
     "ko": "팔만대장경을 간직한 해인사."
+   },
+   "name": {
+    "ko": "합천",
+    "en": "Hapcheon"
+   },
+   "badge": {
+    "ko": "팔만대장경 수호자",
+    "en": "Tripitaka Keeper"
+   },
+   "highlights": {
+    "ko": "해인사 장경판전, 소리길",
+    "en": "Haeinsa Janggyeong Panjeon, Sorigil trail"
    }
   },
   {
@@ -1343,6 +1880,18 @@
    "why": {
     "en": "Walk the old scholars' road over the mountain pass.",
     "ko": "선비들이 넘던 옛 과거길."
+   },
+   "name": {
+    "ko": "문경",
+    "en": "Mungyeong"
+   },
+   "badge": {
+    "ko": "과거길 선비",
+    "en": "Scholar's Road"
+   },
+   "highlights": {
+    "ko": "문경새재, 오미자 막걸리",
+    "en": "Mungyeong Saejae pass, omija makgeolli"
    }
   },
   {
@@ -1371,6 +1920,18 @@
    "why": {
     "en": "Misty Jusanji pond with trees growing in the water.",
     "ko": "물속에 나무가 자라는 안개 낀 주산지."
+   },
+   "name": {
+    "ko": "청송",
+    "en": "Cheongsong"
+   },
+   "badge": {
+    "ko": "주산지의 아침",
+    "en": "Misty Pond"
+   },
+   "highlights": {
+    "ko": "주왕산, 주산지, 청송 사과",
+    "en": "Juwangsan, Jusanji pond, Cheongsong apples"
    }
   },
   {
@@ -1399,6 +1960,18 @@
    "why": {
     "en": "Snow crab country and a long coastal walking trail.",
     "ko": "대게의 고장과 긴 해안 트레킹길."
+   },
+   "name": {
+    "ko": "영덕",
+    "en": "Yeongdeok"
+   },
+   "badge": {
+    "ko": "대게 원정대",
+    "en": "Snow Crab Squad"
+   },
+   "highlights": {
+    "ko": "블루로드, 풍력발전단지, 영덕대게",
+    "en": "Blue Road trail, wind farm, snow crab"
    }
   },
   {
@@ -1428,6 +2001,18 @@
    "why": {
     "en": "A canyon train through the mountains and a tiny Santa village.",
     "ko": "산을 가르는 협곡열차와 작은 산타마을."
+   },
+   "name": {
+    "ko": "봉화",
+    "en": "Bonghwa"
+   },
+   "badge": {
+    "ko": "협곡열차 탑승객",
+    "en": "Canyon Rail Rider"
+   },
+   "highlights": {
+    "ko": "분천 산타마을, 백두대간 협곡열차",
+    "en": "Buncheon Santa Village, Baekdudaegan canyon train"
    }
   },
   {
@@ -1457,6 +2042,18 @@
    "why": {
     "en": "Y-shaped suspension bridge and cool valley streams.",
     "ko": "Y자 출렁다리와 시원한 계곡."
+   },
+   "name": {
+    "ko": "거창",
+    "en": "Geochang"
+   },
+   "badge": {
+    "ko": "Y자 출렁다리",
+    "en": "Bridge Walker"
+   },
+   "highlights": {
+    "ko": "Y자형 출렁다리, 수승대",
+    "en": "Y-shaped suspension bridge, Suseungdae"
    }
   },
   {
@@ -1488,6 +2085,18 @@
    "why": {
     "en": "Volcanic craters, black-stone beaches, forests and tangerines.",
     "ko": "화산 분화구, 현무암 해변, 숲, 그리고 귤."
+   },
+   "name": {
+    "ko": "제주",
+    "en": "Jeju"
+   },
+   "badge": {
+    "ko": "오름 정복",
+    "en": "Oreum Conqueror"
+   },
+   "highlights": {
+    "ko": "성산일출봉, 오름, 올레길, 바다",
+    "en": "Seongsan Ilchulbong, oreum hills, Olle trails, beaches"
    }
   },
   {
@@ -1516,6 +2125,18 @@
    "why": {
     "en": "Remote volcanic island of sheer cliffs — the gateway to Dokdo.",
     "ko": "깎아지른 절벽의 화산섬, 독도로 가는 관문."
+   },
+   "name": {
+    "ko": "울릉도",
+    "en": "Ulleungdo"
+   },
+   "badge": {
+    "ko": "동해의 끝",
+    "en": "Edge of the East Sea"
+   },
+   "highlights": {
+    "ko": "해안 절벽, 나리분지, 독도 (날씨 허락 시)",
+    "en": "Sea cliffs, Nari Basin, Dokdo (weather permitting)"
    }
   }
  ],

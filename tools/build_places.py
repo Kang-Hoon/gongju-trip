@@ -71,12 +71,22 @@ SD = [
 ("gwangjin",[0,3,3,2,3,2,4,0,0]),
 ]
 
+# Names, badge titles and highlights come from badges/data.js so there is one source of truth.
+import re as _re
+_bd = open("badges/data.js", encoding="utf-8").read()
+NAMES = {}
+for m in _re.finditer(r'\{ id: "([a-z]+)", r: "[a-z]+", ko: "([^"]+)", en: "([^"]+)"[\s\S]*?t: \{ ko: "([^"]+)", en: "([^"]+)" \}, d: \{ ko: "([^"]+)", en: "([^"]+)" \}', _bd):
+    i, ko, en, tko, ten, dko, den = m.groups()
+    NAMES[i] = {"name": {"ko": ko, "en": en}, "badge": {"ko": tko, "en": ten}, "highlights": {"ko": dko, "en": den}}
+NAMES["seoul"] = {"name": {"ko": "서울", "en": "Seoul"}, "badge": None,
+    "highlights": {"ko": "궁궐과 북촌, 광장시장, 성수 카페, 남산, 한강", "en": "Palaces and Bukchon, Gwangjang Market, Seongsu cafés, Namsan, the Han River"}}
+
 places = []
 for (pid, r, sc, hrs, days, seas, crowd, easy, access, plan, wen, wko) in P:
     assert len(sc) == 9, pid
     places.append({"id": pid, "region": r, "scores": {K[k]: v for k, v in zip(D, sc)},
         "hours_from_seoul": hrs, "days": days, "seasons": seas.split(), "crowd": crowd, "easy": easy,
-        "access": access, "plan": plan or None, "why": {"en": wen, "ko": wko}})
+        "access": access, "plan": plan or None, "why": {"en": wen, "ko": wko}, **NAMES[pid]})
 districts = [{"id": i, "scores": {K[k]: v for k, v in zip(D, sc)}} for i, sc in SD]
 json.dump({"version": 2, "scale": 5, "updated": "2026-11-19", "dims": [K[k] for k in D], "places": places, "seoul_districts": districts},
           open("data/places.json", "w"), ensure_ascii=False, indent=1)

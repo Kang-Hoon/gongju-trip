@@ -192,3 +192,26 @@ a { color: inherit; }
   .bar { grid-template-columns: 95px 1fr 28px; }
   .lead { font-size: 16.5px; }
 }
+
+/* Finder results */
+.match-grid { display: grid; gap: 14px; }
+.match-card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px; }
+.match-card.best { border: 2px solid var(--accent); }
+.mc-head { display: flex; gap: 14px; align-items: center; margin-bottom: 8px; }
+.mc-head canvas, .more-row canvas { width: 64px; height: 64px; image-rendering: pixelated; flex-shrink: 0; }
+.more-row canvas { width: 40px; height: 40px; }
+.slot-label { font-size: 11.5px; font-weight: 700; letter-spacing: .1em; color: var(--accent); }
+.match-card.gem .slot-label { color: var(--gold); }
+.match-card h3 { font-size: 24px; margin: 2px 0 0; }
+.match-card .pct, .more-row .pct { font-size: 15px; color: var(--muted); font-weight: 600; font-family: "Inter", sans-serif; margin-left: 6px; }
+.match-card .why { margin: 4px 0 10px; color: #4a3d30; font-size: 15.5px; }
+.match-card .tags { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; font-size: 13px; color: var(--muted); margin-bottom: 10px; }
+.facts-row { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
+.facts-row span { background: #fff; border: 1px solid var(--line); border-radius: 99px; padding: 4px 10px; font-size: 13px; }
+.match-card .hl { font-size: 14px; margin: 0 0 10px; color: #4a3d30; }
+.match-card .note { font-size: 13px; color: #8a5a12; margin: 0 0 8px; }
+.match-card .small-text { margin: 0 0 10px; }
+.more-list { display: grid; gap: 10px; }
+.more-row { display: grid; grid-template-columns: 40px auto 1fr auto; gap: 10px; align-items: center; }
+.more-row .mname { font-weight: 600; }
+@media (max-width: 640px) { .more-row { grid-template-columns: 40px 1fr auto; } .more-row .small-text { display: none; } }
